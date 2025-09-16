@@ -1,0 +1,519 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_video_player.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
+import '/index.dart';
+import '/pages/onboarding_03/onboarding03_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'onboarding02_model.dart';
+export 'onboarding02_model.dart';
+
+class Onboarding02Widget extends StatefulWidget {
+  const Onboarding02Widget({super.key});
+
+  static String routeName = 'Onboarding_02';
+  static String routePath = '/onboarding02';
+
+  @override
+  State<Onboarding02Widget> createState() => _Onboarding02WidgetState();
+}
+
+class _Onboarding02WidgetState extends State<Onboarding02Widget> {
+  late Onboarding02Model _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => Onboarding02Model());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        body: ClipRRect(
+          child: Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).secondaryBackground,
+            ),
+            child: Container(
+              width: double.infinity,
+              height: double.infinity,
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: Transform.scale(
+                      scaleX: 1.5,
+                      scaleY: 1.5,
+                      child: FlutterFlowVideoPlayer(
+                        path:
+                            'assets/videos/onboarding2_1fzkRmx2.mp4',
+                        videoType: VideoType.asset,
+                        autoPlay: true,
+                        looping: true,
+                        showControls: false,
+                        allowFullScreen: true,
+                        allowPlaybackSpeedMenu: false,
+                      ),
+                    ),
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional(0.8, -0.8),
+                    child: FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: FFLocalizations.of(context).getText(
+                        '0kynm3d2' /* Salta */,
+                      ),
+                      options: FFButtonOptions(
+                        height: 40.0,
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            16.0, 0.0, 16.0, 0.0),
+                        iconPadding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: Color(0x7FEFEFEF),
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              font: GoogleFonts.dmSans(
+                                fontWeight: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .fontWeight,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .fontStyle,
+                              ),
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              letterSpacing: 0.0,
+                              fontWeight: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .fontWeight,
+                              fontStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .fontStyle,
+                            ),
+                        elevation: 0.0,
+                        borderRadius: BorderRadius.circular(24.0),
+                      ),
+                    ),
+                  ),
+                  // =========================
+                  // SEZIONE IN BASSO CON BLUR
+                  // =========================
+                  Align(
+                    alignment: AlignmentDirectional(0.0, 1.0),
+                    child: Container(
+                      width: double.infinity,
+                      height: 450.0,
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [Color(0x0014181B), Color(0x7F14181B)],
+                          stops: [0.0, 1.0],
+                          begin: AlignmentDirectional(0.0, -1.0),
+                          end: AlignmentDirectional(0, 1.0),
+                        ),
+                      ),
+                      child: Stack(
+                        children: [
+                          // === LAYER BLUR con maschera (fade verso l'alto) ===
+                          Positioned.fill(
+                            child: IgnorePointer(
+                              child: ShaderMask(
+                                shaderCallback: (rect) => const LinearGradient(
+                                  begin: Alignment.bottomCenter,
+                                  end: Alignment.topCenter,
+                                  // Bianco = mostra il blur, Trasparente = nasconde
+                                  colors: [
+                                    Colors.white,
+                                    Colors.white,
+                                    Colors.transparent
+                                  ],
+                                  stops: [0.0, 0.72, 1.0], // esteso un po' più in alto
+                                ).createShader(rect),
+                                blendMode: BlendMode.dstIn,
+                                child: ClipRect(
+                                  child: BackdropFilter(
+                                    filter: ImageFilter.blur(
+                                      sigmaX: 12.0,
+                                      sigmaY: 12.0,
+                                    ),
+                                    child: Container(
+                                      color: Colors.transparent,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // === OVERLAY OPACO (scurisce il fondo in basso) ===
+                          Positioned.fill(
+                            child: IgnorePointer(
+                              child: Container(
+                                decoration: const BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.bottomCenter,
+                                    end: Alignment.topCenter,
+                                    // Più opaco in basso -> trasparente verso l’alto
+                                    colors: [
+                                      Color(0xF014181B), // ~94% opaco in basso
+                                      Color(0xCC14181B), // ~80% a 10%
+                                      Colors.transparent, // svanisce già al 20%
+                                    ],
+                                    stops: [0.0, 0.1, 0.2],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          // === LAYER CONTENUTI (non sfumati) ===
+                          Align(
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(0.0),
+                              child: Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(0.0, 0.0),
+                                      child: Container(
+                                        width: double.infinity,
+                                        height: 402.0,
+                                        decoration: const BoxDecoration(
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              Color(0x00090F13),
+                                              Color(0x991D2429)
+                                            ],
+                                            stops: [0.0, 0.5],
+                                            begin: AlignmentDirectional(
+                                                0.0, -1.0),
+                                            end:
+                                                AlignmentDirectional(0, 1.0),
+                                          ),
+                                        ),
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional
+                                                  .fromSTEB(16.0, 100.0, 16.0, 0.0),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              // ========= COLONNA INTERNA: titolo, sottotitolo, CTA =========
+                                              Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  // ====== TITOLO ======
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 0.3),
+                                                    child: Text(
+                                                      'Scopri il\ntuo piatto perfetto',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .headlineLarge
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .dmSans(
+                                                                  fontWeight:
+                                                                      FlutterFlowTheme.of(context)
+                                                                          .headlineLarge
+                                                                          .fontWeight,
+                                                                  fontStyle:
+                                                                      FlutterFlowTheme.of(context)
+                                                                          .headlineLarge
+                                                                          .fontStyle,
+                                                                ),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryBackground,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .headlineLarge
+                                                                        .fontWeight,
+                                                                fontStyle:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .headlineLarge
+                                                                        .fontStyle,
+                                                              ),
+                                                    ),
+                                                  ),
+
+                                                  // ---- spazio tra titolo e sottotitolo: 16 ----
+                                                  const SizedBox(height: 16.0),
+
+                                                  // ====== SOTTOTITOLO ======
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0.0, 1.0),
+                                                    child: Text(
+                                                      'Cerca il piatto che incontra il tuo gusto. Ingredienti di alta qualità a portata di mano.',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .labelLarge
+                                                              .override(
+                                                                font:
+                                                                    GoogleFonts
+                                                                        .dmSans(
+                                                                  fontWeight:
+                                                                      FlutterFlowTheme.of(context)
+                                                                          .labelLarge
+                                                                          .fontWeight,
+                                                                  fontStyle:
+                                                                      FlutterFlowTheme.of(context)
+                                                                          .labelLarge
+                                                                          .fontStyle,
+                                                                ),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryBackground,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .labelLarge
+                                                                        .fontWeight,
+                                                                fontStyle:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .labelLarge
+                                                                        .fontStyle,
+                                                                lineHeight: 1.5,
+                                                              ),
+                                                    ),
+                                                  ),
+
+                                                  // ---- spazio tra sottotitolo e CTA: 40 ----
+                                                  const SizedBox(height: 40.0),
+
+                                                  // ====== CTA IN ORIZZONTALE ======
+                                                  Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      // CTA TERZIARIA: Indietro (testo bianco, no bg)
+                                                      Expanded(
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.75),
+                                                          child:
+                                                              FFButtonWidget(
+                                                            onPressed: () {
+                                                              context.safePop();
+                                                            },
+                                                            text: 'Indietro',
+                                                            options:
+                                                                FFButtonOptions(
+                                                              width: double
+                                                                  .infinity,
+                                                              height: 48.0,
+                                                              padding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          16.0,
+                                                                          0.0,
+                                                                          16.0,
+                                                                          0.0),
+                                                              iconPadding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              color: Colors
+                                                                  .transparent,
+                                                              textStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleSmall
+                                                                      .override(
+                                                                        font: GoogleFonts
+                                                                            .dmSans(
+                                                                          fontWeight:
+                                                                              FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                          fontStyle:
+                                                                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                        ),
+                                                                        color: Color(
+                                                                            0xFFFFFFFF),
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        fontWeight:
+                                                                            FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                        fontStyle:
+                                                                            FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                      ),
+                                                              elevation: 0.0,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          16.0),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                          width: 12.0),
+                                                      // CTA PRIMARIA: Avanti (bg bianco, testo blu)
+                                                      Expanded(
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.75),
+                                                          child:
+                                                              FFButtonWidget(
+                                                            onPressed:
+                                                                () async {
+                                                              context
+                                                                  .pushNamed(
+                                                                Onboarding03Widget
+                                                                    .routeName,
+                                                                extra: <
+                                                                    String,
+                                                                    dynamic>{
+                                                                  kTransitionInfoKey:
+                                                                      const TransitionInfo(
+                                                                    hasTransition:
+                                                                        true,
+                                                                    transitionType:
+                                                                        PageTransitionType
+                                                                            .fade,
+                                                                    duration: Duration(
+                                                                        milliseconds:
+                                                                            600),
+                                                                  ),
+                                                                },
+                                                              );
+                                                            },
+                                                            text: 'Avanti',
+                                                            options:
+                                                                FFButtonOptions(
+                                                              width: double
+                                                                  .infinity,
+                                                              height: 48.0,
+                                                              padding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          16.0,
+                                                                          0.0,
+                                                                          16.0,
+                                                                          0.0),
+                                                              iconPadding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              color: Color(
+                                                                  0xFFFFFFFF),
+                                                              textStyle:
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleSmall
+                                                                      .override(
+                                                                        font: GoogleFonts
+                                                                            .dmSans(
+                                                                          fontWeight:
+                                                                              FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                          fontStyle:
+                                                                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                        ),
+                                                                        color: Color(
+                                                                            0xFF4287F5),
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        fontWeight:
+                                                                            FlutterFlowTheme.of(context).titleSmall.fontWeight,
+                                                                        fontStyle:
+                                                                            FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                                                                      ),
+                                                              elevation: 0.0,
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          16.0),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                              // ========== FINE COLONNA INTERNA ==========
+                                            ]
+                                                .divide(const SizedBox(
+                                                    height: 40.0))
+                                                .addToStart(const SizedBox(
+                                                    height: 0.0)),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ]
+                                      .divide(const SizedBox(height: 48.0))
+                                      .addToStart(
+                                          const SizedBox(height: 48.0))
+                                      .addToEnd(const SizedBox(height: 0.0)),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  // =========================
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
