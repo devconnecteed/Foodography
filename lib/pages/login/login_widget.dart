@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'login_model.dart';
@@ -55,30 +56,19 @@ class _LoginWidgetState extends State<LoginWidget> {
           top: true,
           child: Column(
             children: [
-              // Header con freccia indietro e titolo
-              Container(
-                width: double.infinity,
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 24.0),
+              // Header con freccia indietro
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 24.0, 0.0),
                 child: Row(
                   children: [
                     GestureDetector(
                       onTap: () async {
-                        context.safePop();
+                        context.pushNamed(IniziaWidget.routeName);
                       },
                       child: Icon(
                         Icons.arrow_back_ios,
                         color: FlutterFlowTheme.of(context).primaryText,
                         size: 24.0,
-                      ),
-                    ),
-                    SizedBox(width: 16.0),
-                    Text(
-                      'Accedi con email e password.',
-                      style: FlutterFlowTheme.of(context).bodyLarge.override(
-                        font: GoogleFonts.dmSans(
-                          fontWeight: FontWeight.w500,
-                        ),
-                        letterSpacing: 0.0,
                       ),
                     ),
                   ],
@@ -344,11 +334,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   letterSpacing: 0.0,
                                 ),
                               ),
-                              GestureDetector(
-                                onTap: () async {
-                                  // TODO: Navigare alla pagina di registrazione
-                                  print('Registrati qui tapped');
-                                },
+                                GestureDetector(
+                                  onTap: () async {
+                                    context.pushNamed(RegistrazioneWidget.routeName);
+                                  },
                                 child: Text(
                                   'Registrati qui',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(

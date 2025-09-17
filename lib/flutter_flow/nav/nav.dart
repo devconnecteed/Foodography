@@ -72,6 +72,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => IniziaWidget(),
         ),
         FFRoute(
+          name: RegistrazioneWidget.routeName,
+          path: RegistrazioneWidget.routePath,
+          builder: (context, params) => RegistrazioneWidget(),
+        ),
+        FFRoute(
           name: LoginWidget.routeName,
           path: LoginWidget.routePath,
           builder: (context, params) => LoginWidget(),

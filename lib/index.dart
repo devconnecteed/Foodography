@@ -3,6 +3,7 @@ export '/pages/onboarding_01/onboarding01_widget.dart' show Onboarding01Widget;
 export '/pages/onboarding_02/onboarding02_widget.dart' show Onboarding02Widget;
 export '/pages/onboarding_03/onboarding03_widget.dart' show Onboarding03Widget;
 export '/pages/inizia/inizia_widget.dart' show IniziaWidget;
+export '/pages/registrazione/registrazione_widget.dart' show RegistrazioneWidget;
 export '/pages/login/login_widget.dart' show LoginWidget;
 export '/pages/homepage/homepage_widget.dart' show HomepageWidget;
 export '/pages/diario/diario_widget.dart' show DiarioWidget;
