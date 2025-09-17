@@ -166,15 +166,19 @@ class _NavBarPageState extends State<NavBarPage> {
           child: _currentPage ?? tabs[_currentPageName]!),
       extendBody: true,
       bottomNavigationBar: _currentPageName == 'Camera' ? null : Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
             child: Container(
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).secondaryBackground.withOpacity(0.8),
-                borderRadius: BorderRadius.circular(20.0),
+                border: Border(
+                  top: BorderSide(
+                    color: FlutterFlowTheme.of(context).alternate,
+                    width: 1.0,
+                  ),
+                ),
               ),
               child: FloatingNavbar(
               currentIndex: currentIndex,
@@ -186,11 +190,11 @@ class _NavBarPageState extends State<NavBarPage> {
               selectedItemColor: Color(0xFF4287F5),
               unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
               selectedBackgroundColor: Color(0x00000000),
-              borderRadius: 20.0,
+              borderRadius: 0.0,
               itemBorderRadius: 0.0,
               margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 4.0),
-              width: 345.0,
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+              width: double.infinity,
               elevation: 0.0,
         items: [
           FloatingNavbarItem(
@@ -303,8 +307,8 @@ class _NavBarPageState extends State<NavBarPage> {
           )
         ],
       ),
-        ),
-      ),
+            ),
+          ),
         ),
       ),
     );
