@@ -106,7 +106,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ].divide(SizedBox(width: 270.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 16.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '2364z8yc' /* Ordinamento */,
@@ -128,7 +128,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 32.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -145,7 +145,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                         onChanged: (val) => safeSetState(() {}),
                         controller: _model.radioButtonValueController1 ??=
                             FormFieldController<String>(null),
-                        optionHeight: 32.0,
+                        optionHeight: 40.0,
                         textStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   font: GoogleFonts.dmSans(
@@ -192,7 +192,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                         verticalAlignment: WrapCrossAlignment.start,
                       ),
                     ),
-                    SizedBox(width: 24.0),
+                    SizedBox(width: 32.0),
                     Expanded(
                       child: FlutterFlowRadioButton(
                         options: [
@@ -206,7 +206,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                         onChanged: (val) => safeSetState(() {}),
                         controller: _model.radioButtonValueController2 ??=
                             FormFieldController<String>(null),
-                        optionHeight: 32.0,
+                        optionHeight: 40.0,
                         textStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   font: GoogleFonts.dmSans(
@@ -257,7 +257,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 16.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'uvgai32y' /* Per ristorante */,
@@ -279,12 +279,12 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 32.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -319,7 +319,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                               checkColor: FlutterFlowTheme.of(context).info,
                             ),
                           ),
-                          SizedBox(width: 12.0),
+                          SizedBox(width: 16.0),
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -349,7 +349,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -384,7 +384,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                               checkColor: FlutterFlowTheme.of(context).info,
                             ),
                           ),
-                          SizedBox(width: 12.0),
+                          SizedBox(width: 16.0),
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -449,7 +449,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                               checkColor: FlutterFlowTheme.of(context).info,
                             ),
                           ),
-                          SizedBox(width: 12.0),
+                          SizedBox(width: 16.0),
                           Expanded(
                             child: Text(
                               FFLocalizations.of(context).getText(
@@ -482,7 +482,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 16.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '9the0k5y' /* Per area geografica */,
@@ -504,7 +504,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 32.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -513,7 +513,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                       children: [
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -552,7 +552,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                SizedBox(width: 12.0),
+                                SizedBox(width: 16.0),
                                 Expanded(
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -585,10 +585,10 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 16.0),
+                        SizedBox(width: 24.0),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -627,7 +627,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                SizedBox(width: 12.0),
+                                SizedBox(width: 16.0),
                                 Expanded(
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -667,7 +667,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                       children: [
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -706,7 +706,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                SizedBox(width: 12.0),
+                                SizedBox(width: 16.0),
                                 Expanded(
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -739,10 +739,10 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 16.0),
+                        SizedBox(width: 24.0),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -781,7 +781,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                SizedBox(width: 12.0),
+                                SizedBox(width: 16.0),
                                 Expanded(
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -865,7 +865,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 16.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'yu2ir5h8' /* Per tipo di cucina */,
@@ -887,7 +887,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 32.0),
                 child: FlutterFlowChoiceChips(
                   options: [
                     ChipData(FFLocalizations.of(context).getText(
@@ -954,8 +954,8 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                     elevation: 0.0,
                     borderRadius: BorderRadius.circular(24.0),
                   ),
-                  chipSpacing: 12.0,
-                  rowSpacing: 12.0,
+                  chipSpacing: 16.0,
+                  rowSpacing: 16.0,
                   multiselect: false,
                   alignment: WrapAlignment.start,
                   controller: _model.choiceChipsValueController ??=
@@ -966,7 +966,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 16.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'f9l8i7vg' /* Per valutazione */,
@@ -988,13 +988,13 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 32.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -1029,7 +1029,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 checkColor: FlutterFlowTheme.of(context).info,
                               ),
                             ),
-                            SizedBox(width: 8.0),
+                            SizedBox(width: 12.0),
                             Text(
                               FFLocalizations.of(context).getText(
                                 'xcyzvck9' /* 5 */,
@@ -1053,7 +1053,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                             .fontStyle,
                                       ),
                             ),
-                            SizedBox(width: 4.0),
+                            SizedBox(width: 6.0),
                             Icon(
                               Icons.star_rounded,
                               color: FlutterFlowTheme.of(context).primary,
@@ -1063,10 +1063,10 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 16.0),
+                    SizedBox(width: 24.0),
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -1101,7 +1101,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 checkColor: FlutterFlowTheme.of(context).info,
                               ),
                             ),
-                            SizedBox(width: 8.0),
+                            SizedBox(width: 12.0),
                             Text(
                               FFLocalizations.of(context).getText(
                                 'u12zc45f' /* 4+ */,
@@ -1125,7 +1125,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                             .fontStyle,
                                       ),
                             ),
-                            SizedBox(width: 4.0),
+                            SizedBox(width: 6.0),
                             Icon(
                               Icons.star_rounded,
                               color: FlutterFlowTheme.of(context).secondary,
@@ -1139,7 +1139,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 32.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -1180,7 +1180,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 checkColor: FlutterFlowTheme.of(context).info,
                               ),
                             ),
-                            SizedBox(width: 8.0),
+                            SizedBox(width: 12.0),
                             Text(
                               FFLocalizations.of(context).getText(
                                 'dy3clk13' /* 3+ */,
@@ -1204,7 +1204,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                             .fontStyle,
                                       ),
                             ),
-                            SizedBox(width: 4.0),
+                            SizedBox(width: 6.0),
                             Icon(
                               Icons.star_rounded,
                               color: FlutterFlowTheme.of(context).secondary,
@@ -1214,7 +1214,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 16.0),
+                    SizedBox(width: 24.0),
                     Expanded(
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -1252,7 +1252,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 checkColor: FlutterFlowTheme.of(context).info,
                               ),
                             ),
-                            SizedBox(width: 8.0),
+                            SizedBox(width: 12.0),
                             Text(
                               FFLocalizations.of(context).getText(
                                 'sjufdr2j' /* 2+ */,
@@ -1276,7 +1276,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                             .fontStyle,
                                       ),
                             ),
-                            SizedBox(width: 4.0),
+                            SizedBox(width: 6.0),
                             Icon(
                               Icons.star_rounded,
                               color: FlutterFlowTheme.of(context).secondary,
@@ -1290,7 +1290,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 32.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
