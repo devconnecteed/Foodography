@@ -106,7 +106,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ].divide(SizedBox(width: 270.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '2364z8yc' /* Ordinamento */,
@@ -127,132 +127,137 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                       ),
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  FlutterFlowRadioButton(
-                    options: [
-                      FFLocalizations.of(context).getText(
-                        'qi9mxzl8' /* Più recenti */,
-                      ),
-                      FFLocalizations.of(context).getText(
-                        '0e704n5v' /* Più votati */,
-                      )
-                    ].toList(),
-                    onChanged: (val) => safeSetState(() {}),
-                    controller: _model.radioButtonValueController1 ??=
-                        FormFieldController<String>(null),
-                    optionHeight: 32.0,
-                    textStyle:
-                        FlutterFlowTheme.of(context).labelMedium.override(
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: FlutterFlowRadioButton(
+                        options: [
+                          FFLocalizations.of(context).getText(
+                            'qi9mxzl8' /* Più recenti */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            '0e704n5v' /* Più votati */,
+                          )
+                        ].toList(),
+                        onChanged: (val) => safeSetState(() {}),
+                        controller: _model.radioButtonValueController1 ??=
+                            FormFieldController<String>(null),
+                        optionHeight: 32.0,
+                        textStyle:
+                            FlutterFlowTheme.of(context).labelMedium.override(
+                                  font: GoogleFonts.dmSans(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
+                        selectedTextStyle: FlutterFlowTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.dmSans(
                                 fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
+                                    .bodyMedium
                                     .fontWeight,
                                 fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
+                                    .bodyMedium
                                     .fontStyle,
                               ),
                               letterSpacing: 0.0,
                               fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
+                                  .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                             ),
-                    selectedTextStyle: FlutterFlowTheme.of(context)
-                        .bodyMedium
-                        .override(
-                          font: GoogleFonts.dmSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
-                          ),
-                          letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                        ),
-                    buttonPosition: RadioButtonPosition.left,
-                    direction: Axis.vertical,
-                    radioButtonColor: FlutterFlowTheme.of(context).primary,
-                    inactiveRadioButtonColor:
-                        FlutterFlowTheme.of(context).secondary,
-                    toggleable: false,
-                    horizontalAlignment: WrapAlignment.start,
-                    verticalAlignment: WrapCrossAlignment.start,
-                  ),
-                  FlutterFlowRadioButton(
-                    options: [
-                      FFLocalizations.of(context).getText(
-                        'l06pwuvy' /* Più vecchi */,
+                        buttonPosition: RadioButtonPosition.left,
+                        direction: Axis.vertical,
+                        radioButtonColor: FlutterFlowTheme.of(context).primary,
+                        inactiveRadioButtonColor:
+                            FlutterFlowTheme.of(context).secondary,
+                        toggleable: false,
+                        horizontalAlignment: WrapAlignment.start,
+                        verticalAlignment: WrapCrossAlignment.start,
                       ),
-                      FFLocalizations.of(context).getText(
-                        '7xsjsdzf' /* Preferiti */,
-                      )
-                    ].toList(),
-                    onChanged: (val) => safeSetState(() {}),
-                    controller: _model.radioButtonValueController2 ??=
-                        FormFieldController<String>(null),
-                    optionHeight: 32.0,
-                    textStyle:
-                        FlutterFlowTheme.of(context).labelMedium.override(
+                    ),
+                    SizedBox(width: 24.0),
+                    Expanded(
+                      child: FlutterFlowRadioButton(
+                        options: [
+                          FFLocalizations.of(context).getText(
+                            'l06pwuvy' /* Più vecchi */,
+                          ),
+                          FFLocalizations.of(context).getText(
+                            '7xsjsdzf' /* Preferiti */,
+                          )
+                        ].toList(),
+                        onChanged: (val) => safeSetState(() {}),
+                        controller: _model.radioButtonValueController2 ??=
+                            FormFieldController<String>(null),
+                        optionHeight: 32.0,
+                        textStyle:
+                            FlutterFlowTheme.of(context).labelMedium.override(
+                                  font: GoogleFonts.dmSans(
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .fontStyle,
+                                  ),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontWeight,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
+                        selectedTextStyle: FlutterFlowTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.dmSans(
                                 fontWeight: FlutterFlowTheme.of(context)
-                                    .labelMedium
+                                    .bodyMedium
                                     .fontWeight,
                                 fontStyle: FlutterFlowTheme.of(context)
-                                    .labelMedium
+                                    .bodyMedium
                                     .fontStyle,
                               ),
                               letterSpacing: 0.0,
                               fontWeight: FlutterFlowTheme.of(context)
-                                  .labelMedium
+                                  .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .fontStyle,
+                              fontStyle:
+                                  FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                             ),
-                    selectedTextStyle: FlutterFlowTheme.of(context)
-                        .bodyMedium
-                        .override(
-                          font: GoogleFonts.dmSans(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
-                          ),
-                          letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                        ),
-                    buttonPosition: RadioButtonPosition.left,
-                    direction: Axis.vertical,
-                    radioButtonColor: FlutterFlowTheme.of(context).primary,
-                    inactiveRadioButtonColor:
-                        FlutterFlowTheme.of(context).secondary,
-                    toggleable: false,
-                    horizontalAlignment: WrapAlignment.start,
-                    verticalAlignment: WrapCrossAlignment.start,
-                  ),
-                ]
-                    .divide(SizedBox(width: 100.0))
-                    .addToStart(SizedBox(width: 8.0))
-                    .addToEnd(SizedBox(width: 16.0)),
+                        buttonPosition: RadioButtonPosition.left,
+                        direction: Axis.vertical,
+                        radioButtonColor: FlutterFlowTheme.of(context).primary,
+                        inactiveRadioButtonColor:
+                            FlutterFlowTheme.of(context).secondary,
+                        toggleable: false,
+                        horizontalAlignment: WrapAlignment.start,
+                        verticalAlignment: WrapCrossAlignment.start,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'uvgai32y' /* Per ristorante */,
@@ -274,192 +279,210 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4.0),
+                                ),
                               ),
+                              unselectedWidgetColor:
+                                  FlutterFlowTheme.of(context).alternate,
                             ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).alternate,
+                            child: Checkbox(
+                              value: _model.checkboxValue1 ??= true,
+                              onChanged: (newValue) async {
+                                safeSetState(
+                                    () => _model.checkboxValue1 = newValue!);
+                              },
+                              side: (FlutterFlowTheme.of(context).alternate !=
+                                      null)
+                                  ? BorderSide(
+                                      width: 2,
+                                      color:
+                                          FlutterFlowTheme.of(context).alternate!,
+                                    )
+                                  : null,
+                              activeColor: FlutterFlowTheme.of(context).primary,
+                              checkColor: FlutterFlowTheme.of(context).info,
+                            ),
                           ),
-                          child: Checkbox(
-                            value: _model.checkboxValue1 ??= true,
-                            onChanged: (newValue) async {
-                              safeSetState(
-                                  () => _model.checkboxValue1 = newValue!);
-                            },
-                            side: (FlutterFlowTheme.of(context).alternate !=
-                                    null)
-                                ? BorderSide(
-                                    width: 2,
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate!,
-                                  )
-                                : null,
-                            activeColor: FlutterFlowTheme.of(context).primary,
-                            checkColor: FlutterFlowTheme.of(context).info,
+                          SizedBox(width: 12.0),
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'gxiw8kla' /* Dar Bruttone */,
+                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).bodyMedium.override(
+                                        font: GoogleFonts.dmSans(
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                            ),
                           ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'gxiw8kla' /* Dar Bruttone */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.dmSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4.0),
+                                ),
                               ),
+                              unselectedWidgetColor:
+                                  FlutterFlowTheme.of(context).alternate,
                             ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).alternate,
+                            child: Checkbox(
+                              value: _model.checkboxValue2 ??= true,
+                              onChanged: (newValue) async {
+                                safeSetState(
+                                    () => _model.checkboxValue2 = newValue!);
+                              },
+                              side: (FlutterFlowTheme.of(context).alternate !=
+                                      null)
+                                  ? BorderSide(
+                                      width: 2,
+                                      color:
+                                          FlutterFlowTheme.of(context).alternate!,
+                                    )
+                                  : null,
+                              activeColor: FlutterFlowTheme.of(context).primary,
+                              checkColor: FlutterFlowTheme.of(context).info,
+                            ),
                           ),
-                          child: Checkbox(
-                            value: _model.checkboxValue2 ??= true,
-                            onChanged: (newValue) async {
-                              safeSetState(
-                                  () => _model.checkboxValue2 = newValue!);
-                            },
-                            side: (FlutterFlowTheme.of(context).alternate !=
-                                    null)
-                                ? BorderSide(
-                                    width: 2,
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate!,
-                                  )
-                                : null,
-                            activeColor: FlutterFlowTheme.of(context).primary,
-                            checkColor: FlutterFlowTheme.of(context).info,
+                          SizedBox(width: 12.0),
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'p7jaggxz' /* Il Matriciano */,
+                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).bodyMedium.override(
+                                        font: GoogleFonts.dmSans(
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                            ),
                           ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'p7jaggxz' /* Il Matriciano */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.dmSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4.0),
+                                ),
                               ),
+                              unselectedWidgetColor:
+                                  FlutterFlowTheme.of(context).secondary,
                             ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).secondary,
+                            child: Checkbox(
+                              value: _model.checkboxValue3 ??= false,
+                              onChanged: (newValue) async {
+                                safeSetState(
+                                    () => _model.checkboxValue3 = newValue!);
+                              },
+                              side: (FlutterFlowTheme.of(context).secondary !=
+                                      null)
+                                  ? BorderSide(
+                                      width: 2,
+                                      color:
+                                          FlutterFlowTheme.of(context).secondary!,
+                                    )
+                                  : null,
+                              activeColor: FlutterFlowTheme.of(context).primary,
+                              checkColor: FlutterFlowTheme.of(context).info,
+                            ),
                           ),
-                          child: Checkbox(
-                            value: _model.checkboxValue3 ??= false,
-                            onChanged: (newValue) async {
-                              safeSetState(
-                                  () => _model.checkboxValue3 = newValue!);
-                            },
-                            side: (FlutterFlowTheme.of(context).secondary !=
-                                    null)
-                                ? BorderSide(
-                                    width: 2,
-                                    color:
-                                        FlutterFlowTheme.of(context).secondary!,
-                                  )
-                                : null,
-                            activeColor: FlutterFlowTheme.of(context).primary,
-                            checkColor: FlutterFlowTheme.of(context).info,
+                          SizedBox(width: 12.0),
+                          Expanded(
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                '5vbbb2u8' /* Da Felice a Testaccio */,
+                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).bodyMedium.override(
+                                        font: GoogleFonts.dmSans(
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                            ),
                           ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            '5vbbb2u8' /* Da Felice a Testaccio */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.dmSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '9the0k5y' /* Per area geografica */,
@@ -480,19 +503,17 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                       ),
                 ),
               ),
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 0.0, 0.0),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -531,38 +552,43 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'qoxw9i21' /* Roma */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
+                                SizedBox(width: 12.0),
+                                Expanded(
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'qoxw9i21' /* Roma */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          letterSpacing: 0.0,
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                         ),
-                                        letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 0.0, 0.0),
+                        ),
+                        SizedBox(width: 16.0),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -601,43 +627,47 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'smobnc0x' /* Milano */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
+                                SizedBox(width: 12.0),
+                                Expanded(
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'smobnc0x' /* Milano */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          letterSpacing: 0.0,
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                         ),
-                                        letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
-                        ].divide(SizedBox(width: 128.0)),
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 0.0, 0.0),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -676,38 +706,43 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'gntvgjgb' /* Napoli */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
+                                SizedBox(width: 12.0),
+                                Expanded(
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'gntvgjgb' /* Napoli */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          letterSpacing: 0.0,
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                         ),
-                                        letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 0.0, 0.0),
+                        ),
+                        SizedBox(width: 16.0),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -746,38 +781,44 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                         FlutterFlowTheme.of(context).info,
                                   ),
                                 ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'zmy0fb17' /* Torino */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
+                                SizedBox(width: 12.0),
+                                Expanded(
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'zmy0fb17' /* Torino */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontWeight,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          letterSpacing: 0.0,
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                         ),
-                                        letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
-                        ].divide(SizedBox(width: 124.0)),
-                      ),
-                      FFButtonWidget(
+                        ),
+                      ],
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: FFButtonWidget(
                         onPressed: () {
                           print('Button pressed ...');
                         },
@@ -819,12 +860,12 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
-                    ].divide(SizedBox(height: 0.0)),
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'yu2ir5h8' /* Per tipo di cucina */,
@@ -846,7 +887,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
                 child: FlutterFlowChoiceChips(
                   options: [
                     ChipData(FFLocalizations.of(context).getText(
@@ -913,8 +954,8 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                     elevation: 0.0,
                     borderRadius: BorderRadius.circular(24.0),
                   ),
-                  chipSpacing: 8.0,
-                  rowSpacing: 8.0,
+                  chipSpacing: 12.0,
+                  rowSpacing: 12.0,
                   multiselect: false,
                   alignment: WrapAlignment.start,
                   controller: _model.choiceChipsValueController ??=
@@ -925,7 +966,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 12.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'f9l8i7vg' /* Per valutazione */,
@@ -946,365 +987,397 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                       ),
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
-                            ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).alternate,
-                          ),
-                          child: Checkbox(
-                            value: _model.checkboxValue8 ??= true,
-                            onChanged: (newValue) async {
-                              safeSetState(
-                                  () => _model.checkboxValue8 = newValue!);
-                            },
-                            side: (FlutterFlowTheme.of(context).alternate !=
-                                    null)
-                                ? BorderSide(
-                                    width: 2,
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate!,
-                                  )
-                                : null,
-                            activeColor: FlutterFlowTheme.of(context).primary,
-                            checkColor: FlutterFlowTheme.of(context).info,
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'xcyzvck9' /* 5 */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.dmSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                        Icon(
-                          Icons.star_rounded,
-                          color: FlutterFlowTheme.of(context).primary,
-                          size: 24.0,
-                        ),
-                      ].divide(SizedBox(width: 4.0)),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
-                            ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).alternate,
-                          ),
-                          child: Checkbox(
-                            value: _model.checkboxValue9 ??= false,
-                            onChanged: (newValue) async {
-                              safeSetState(
-                                  () => _model.checkboxValue9 = newValue!);
-                            },
-                            side: (FlutterFlowTheme.of(context).alternate !=
-                                    null)
-                                ? BorderSide(
-                                    width: 2,
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate!,
-                                  )
-                                : null,
-                            activeColor: FlutterFlowTheme.of(context).secondary,
-                            checkColor: FlutterFlowTheme.of(context).info,
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'u12zc45f' /* 4+ */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.dmSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                        Icon(
-                          Icons.star_rounded,
-                          color: FlutterFlowTheme.of(context).secondary,
-                          size: 24.0,
-                        ),
-                      ].divide(SizedBox(width: 4.0)),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
-                            ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).alternate,
-                          ),
-                          child: Checkbox(
-                            value: _model.checkboxValue10 ??= false,
-                            onChanged: (newValue) async {
-                              safeSetState(
-                                  () => _model.checkboxValue10 = newValue!);
-                            },
-                            side: (FlutterFlowTheme.of(context).alternate !=
-                                    null)
-                                ? BorderSide(
-                                    width: 2,
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate!,
-                                  )
-                                : null,
-                            activeColor: FlutterFlowTheme.of(context).secondary,
-                            checkColor: FlutterFlowTheme.of(context).info,
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'dy3clk13' /* 3+ */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.dmSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                        Icon(
-                          Icons.star_rounded,
-                          color: FlutterFlowTheme.of(context).secondary,
-                          size: 24.0,
-                        ),
-                      ].divide(SizedBox(width: 4.0)),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
-                            ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).alternate,
-                          ),
-                          child: Checkbox(
-                            value: _model.checkboxValue11 ??= false,
-                            onChanged: (newValue) async {
-                              safeSetState(
-                                  () => _model.checkboxValue11 = newValue!);
-                            },
-                            side: (FlutterFlowTheme.of(context).alternate !=
-                                    null)
-                                ? BorderSide(
-                                    width: 2,
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate!,
-                                  )
-                                : null,
-                            activeColor: FlutterFlowTheme.of(context).secondary,
-                            checkColor: FlutterFlowTheme.of(context).info,
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'sjufdr2j' /* 2+ */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.dmSans(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                        Icon(
-                          Icons.star_rounded,
-                          color: FlutterFlowTheme.of(context).secondary,
-                          size: 24.0,
-                        ),
-                      ].divide(SizedBox(width: 4.0)),
-                    ),
-                  ),
-                ].divide(SizedBox(width: 4.0)),
-              ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 48.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: FFLocalizations.of(context).getText(
-                        '2l4t8ruw' /* Annulla */,
-                      ),
-                      options: FFButtonOptions(
-                        width: 170.0,
-                        height: 48.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0x004287F5),
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
-                                  font: GoogleFonts.dmSans(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontStyle,
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  visualDensity: VisualDensity.compact,
+                                  materialTapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4.0),
                                   ),
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .fontStyle,
                                 ),
-                        elevation: 0.0,
-                        borderRadius: BorderRadius.circular(16.0),
+                                unselectedWidgetColor:
+                                    FlutterFlowTheme.of(context).alternate,
+                              ),
+                              child: Checkbox(
+                                value: _model.checkboxValue8 ??= true,
+                                onChanged: (newValue) async {
+                                  safeSetState(
+                                      () => _model.checkboxValue8 = newValue!);
+                                },
+                                side: (FlutterFlowTheme.of(context).alternate !=
+                                        null)
+                                    ? BorderSide(
+                                        width: 2,
+                                        color:
+                                            FlutterFlowTheme.of(context).alternate!,
+                                      )
+                                    : null,
+                                activeColor: FlutterFlowTheme.of(context).primary,
+                                checkColor: FlutterFlowTheme.of(context).info,
+                              ),
+                            ),
+                            SizedBox(width: 8.0),
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                'xcyzvck9' /* 5 */,
+                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).bodyMedium.override(
+                                        font: GoogleFonts.dmSans(
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                            ),
+                            SizedBox(width: 4.0),
+                            Icon(
+                              Icons.star_rounded,
+                              color: FlutterFlowTheme.of(context).primary,
+                              size: 20.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
-                      },
-                      text: FFLocalizations.of(context).getText(
-                        'uy8f2r5n' /* Applica */,
-                      ),
-                      options: FFButtonOptions(
-                        width: 170.0,
-                        height: 48.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 0.0),
-                        iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primary,
-                        textStyle:
-                            FlutterFlowTheme.of(context).titleSmall.override(
-                                  font: GoogleFonts.dmSans(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .fontStyle,
+                    SizedBox(width: 16.0),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  visualDensity: VisualDensity.compact,
+                                  materialTapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4.0),
                                   ),
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .fontStyle,
                                 ),
-                        elevation: 0.0,
-                        borderRadius: BorderRadius.circular(16.0),
+                                unselectedWidgetColor:
+                                    FlutterFlowTheme.of(context).alternate,
+                              ),
+                              child: Checkbox(
+                                value: _model.checkboxValue9 ??= false,
+                                onChanged: (newValue) async {
+                                  safeSetState(
+                                      () => _model.checkboxValue9 = newValue!);
+                                },
+                                side: (FlutterFlowTheme.of(context).alternate !=
+                                        null)
+                                    ? BorderSide(
+                                        width: 2,
+                                        color:
+                                            FlutterFlowTheme.of(context).alternate!,
+                                      )
+                                    : null,
+                                activeColor: FlutterFlowTheme.of(context).secondary,
+                                checkColor: FlutterFlowTheme.of(context).info,
+                              ),
+                            ),
+                            SizedBox(width: 8.0),
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                'u12zc45f' /* 4+ */,
+                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).bodyMedium.override(
+                                        font: GoogleFonts.dmSans(
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                            ),
+                            SizedBox(width: 4.0),
+                            Icon(
+                              Icons.star_rounded,
+                              color: FlutterFlowTheme.of(context).secondary,
+                              size: 20.0,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ].divide(SizedBox(width: 16.0)),
+                  ],
                 ),
               ),
-            ].divide(SizedBox(height: 16.0)).addToStart(SizedBox(height: 0.0)),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 24.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  visualDensity: VisualDensity.compact,
+                                  materialTapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4.0),
+                                  ),
+                                ),
+                                unselectedWidgetColor:
+                                    FlutterFlowTheme.of(context).alternate,
+                              ),
+                              child: Checkbox(
+                                value: _model.checkboxValue10 ??= false,
+                                onChanged: (newValue) async {
+                                  safeSetState(
+                                      () => _model.checkboxValue10 = newValue!);
+                                },
+                                side: (FlutterFlowTheme.of(context).alternate !=
+                                        null)
+                                    ? BorderSide(
+                                        width: 2,
+                                        color:
+                                            FlutterFlowTheme.of(context).alternate!,
+                                      )
+                                    : null,
+                                activeColor: FlutterFlowTheme.of(context).secondary,
+                                checkColor: FlutterFlowTheme.of(context).info,
+                              ),
+                            ),
+                            SizedBox(width: 8.0),
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                'dy3clk13' /* 3+ */,
+                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).bodyMedium.override(
+                                        font: GoogleFonts.dmSans(
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                            ),
+                            SizedBox(width: 4.0),
+                            Icon(
+                              Icons.star_rounded,
+                              color: FlutterFlowTheme.of(context).secondary,
+                              size: 20.0,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 16.0),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Theme(
+                              data: ThemeData(
+                                checkboxTheme: CheckboxThemeData(
+                                  visualDensity: VisualDensity.compact,
+                                  materialTapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4.0),
+                                  ),
+                                ),
+                                unselectedWidgetColor:
+                                    FlutterFlowTheme.of(context).alternate,
+                              ),
+                              child: Checkbox(
+                                value: _model.checkboxValue11 ??= false,
+                                onChanged: (newValue) async {
+                                  safeSetState(
+                                      () => _model.checkboxValue11 = newValue!);
+                                },
+                                side: (FlutterFlowTheme.of(context).alternate !=
+                                        null)
+                                    ? BorderSide(
+                                        width: 2,
+                                        color:
+                                            FlutterFlowTheme.of(context).alternate!,
+                                      )
+                                    : null,
+                                activeColor: FlutterFlowTheme.of(context).secondary,
+                                checkColor: FlutterFlowTheme.of(context).info,
+                              ),
+                            ),
+                            SizedBox(width: 8.0),
+                            Text(
+                              FFLocalizations.of(context).getText(
+                                'sjufdr2j' /* 2+ */,
+                              ),
+                              style:
+                                  FlutterFlowTheme.of(context).bodyMedium.override(
+                                        font: GoogleFonts.dmSans(
+                                          fontWeight: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                          fontStyle: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
+                                        ),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                            ),
+                            SizedBox(width: 4.0),
+                            Icon(
+                              Icons.star_rounded,
+                              color: FlutterFlowTheme.of(context).secondary,
+                              size: 20.0,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 24.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: FFButtonWidget(
+                        onPressed: () {
+                          print('Button pressed ...');
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          '2l4t8ruw' /* Annulla */,
+                        ),
+                        options: FFButtonOptions(
+                          height: 48.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          color: Color(0x004287F5),
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    font: GoogleFonts.dmSans(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontStyle,
+                                    ),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                          elevation: 0.0,
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 16.0),
+                    Expanded(
+                      child: FFButtonWidget(
+                        onPressed: () {
+                          print('Button pressed ...');
+                        },
+                        text: FFLocalizations.of(context).getText(
+                          'uy8f2r5n' /* Applica */,
+                        ),
+                        options: FFButtonOptions(
+                          height: 48.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
+                          iconPadding:
+                              EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).primary,
+                          textStyle:
+                              FlutterFlowTheme.of(context).titleSmall.override(
+                                    font: GoogleFonts.dmSans(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .fontStyle,
+                                    ),
+                                    color: Colors.white,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .fontStyle,
+                                  ),
+                          elevation: 0.0,
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
             ),
           ),
         ),
