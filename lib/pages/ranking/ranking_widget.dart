@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'ranking_model.dart';
+import 'selezione_citta_widget.dart';
 export 'ranking_model.dart';
 
 class RankingWidget extends StatefulWidget {
@@ -119,33 +120,55 @@ class _RankingWidgetState extends State<RankingWidget> {
                               ),
                             ),
                             SizedBox(height: 4.0),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xFFDBEAFE),
-                                borderRadius: BorderRadius.circular(12.0),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      'Roma',
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight: FontWeight.w600,
+                            InkWell(
+                              onTap: () async {
+                                final result = await showModalBottomSheet<Map<String, dynamic>>(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  enableDrag: true,
+                                  builder: (context) {
+                                    return Container(
+                                      height: MediaQuery.of(context).size.height * 0.8,
+                                      child: SelezioneCittaWidget(),
+                                    );
+                                  },
+                                );
+                                
+                                if (result != null) {
+                                  setState(() {
+                                    _model.cittaSelezionata = result['nome'] as String;
+                                  });
+                                }
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFDBEAFE),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        _model.cittaSelezionata,
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          color: Color(0xFF4287F5),
+                                          letterSpacing: 0.0,
                                         ),
-                                        color: Color(0xFF4287F5),
-                                        letterSpacing: 0.0,
                                       ),
-                                    ),
-                                    SizedBox(width: 8.0),
-                                    Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Color(0xFF4287F5),
-                                      size: 20.0,
-                                    ),
-                                  ],
+                                      SizedBox(width: 8.0),
+                                      Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Color(0xFF4287F5),
+                                        size: 20.0,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

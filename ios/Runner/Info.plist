@@ -49,6 +49,12 @@
 
 	<key>NSCameraUsageDescription</key>
 	<string>Questa app ha bisogno dell'accesso alla fotocamera per scattare foto</string>
+	
+	<!-- Location permissions for Google Maps -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Questa app ha bisogno dell'accesso alla posizione per mostrare i ristoranti vicini</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Questa app ha bisogno dell'accesso alla posizione per mostrare i ristoranti vicini</string>
 
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

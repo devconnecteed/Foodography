@@ -80,6 +80,11 @@ dependencies:
   wakelock_plus_platform_interface: 1.2.3
   camera: ^0.10.5+5
   torch_light: ^1.0.0
+  google_maps_flutter: ^2.5.0
+  geolocator: ^10.1.0
+  geocoding: ^2.1.1
+  map_launcher: ^3.0.0
+  webview_flutter: ^4.4.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

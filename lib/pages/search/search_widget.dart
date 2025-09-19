@@ -987,6 +987,8 @@ class _SearchWidgetState extends State<SearchWidget> {
                           .addToEnd(SizedBox(height: 0.0)),
                     ),
                   ),
+                  
+                  // Bottone Mappa (solo visivo)
                   Positioned(
                     bottom: 32.0,
                     left: 16.0,
@@ -1006,7 +1008,7 @@ class _SearchWidgetState extends State<SearchWidget> {
                         ),
                         child: FFButtonWidget(
                           onPressed: () {
-                            print('Button pressed ...');
+                            // Nessuna azione - solo elemento visivo
                           },
                           text: FFLocalizations.of(context).getText(
                             'pq6ebruj' /* Vedi mappa */,

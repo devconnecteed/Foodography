@@ -6,6 +6,9 @@ class RankingModel extends FlutterFlowModel<RankingWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  
+  // Città selezionata
+  String cittaSelezionata = 'Roma';
 
   @override
   void initState(BuildContext context) {}
