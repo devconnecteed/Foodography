@@ -9,6 +9,15 @@ class RankingModel extends FlutterFlowModel<RankingWidget> {
   
   // Città selezionata
   String cittaSelezionata = 'Roma';
+  
+  // Ordinamento selezionato
+  String ordinamentoSelezionato = 'Più votati';
+  
+  // Raggio selezionato
+  String raggioSelezionato = '5.0km';
+  
+  // Categoria selezionata
+  String categoriaSelezionata = 'Tutti';
 
   @override
   void initState(BuildContext context) {}

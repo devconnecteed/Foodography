@@ -642,7 +642,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
                                 _capitalizeFirstLetter(DateFormat('MMMM yyyy', 'it').format(selectedDate)),
                                 style: TextStyle(
                                   fontSize: 18,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.normal,
                                   color: Color(0xFF1F2937),
                                 ),
                               ),
@@ -693,7 +693,11 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
                           
                           // Calendar grid
                           Expanded(
-                            child: _buildCalendarGrid(selectedDate, setModalState),
+                            child: _buildCalendarGrid(selectedDate, setModalState, (newDate) {
+                              setModalState(() {
+                                selectedDate = newDate;
+                              });
+                            }),
                           ),
                         ],
                       ),
@@ -741,7 +745,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
     );
   }
 
-  Widget _buildCalendarGrid(DateTime selectedDate, StateSetter setModalState) {
+  Widget _buildCalendarGrid(DateTime selectedDate, StateSetter setModalState, Function(DateTime) onDateSelected) {
     final firstDayOfMonth = DateTime(selectedDate.year, selectedDate.month, 1);
     final lastDayOfMonth = DateTime(selectedDate.year, selectedDate.month + 1, 0);
     final firstDayWeekday = firstDayOfMonth.weekday % 7; // Convert to Sunday = 0
@@ -780,9 +784,8 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
       calendarDays.add(
         GestureDetector(
           onTap: isFuture ? null : () {
-            setModalState(() {
-              selectedDate = DateTime(selectedDate.year, selectedDate.month, day);
-            });
+            final newDate = DateTime(selectedDate.year, selectedDate.month, day);
+            onDateSelected(newDate);
           },
           child: Container(
             height: 40,

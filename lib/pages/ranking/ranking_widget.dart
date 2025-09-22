@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'ranking_model.dart';
 import 'selezione_citta_widget.dart';
+import 'selezione_ordinamento_widget.dart';
+import 'selezione_raggio_widget.dart';
+import 'selezione_categorie_widget.dart';
 export 'ranking_model.dart';
 
 class RankingWidget extends StatefulWidget {
@@ -190,33 +193,55 @@ class _RankingWidgetState extends State<RankingWidget> {
                               ),
                             ),
                             SizedBox(height: 4.0),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xFFDBEAFE),
-                                borderRadius: BorderRadius.circular(12.0),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      'Più votati',
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight: FontWeight.w600,
+                            InkWell(
+                              onTap: () async {
+                                final result = await showModalBottomSheet<Map<String, dynamic>>(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  enableDrag: true,
+                                  builder: (context) {
+                                    return Container(
+                                      height: MediaQuery.of(context).size.height * 0.8,
+                                      child: SelezioneOrdinamentoWidget(),
+                                    );
+                                  },
+                                );
+                                
+                                if (result != null) {
+                                  setState(() {
+                                    _model.ordinamentoSelezionato = result['titolo'] as String;
+                                  });
+                                }
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFDBEAFE),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        _model.ordinamentoSelezionato,
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          color: Color(0xFF4287F5),
+                                          letterSpacing: 0.0,
                                         ),
-                                        color: Color(0xFF4287F5),
-                                        letterSpacing: 0.0,
                                       ),
-                                    ),
-                                    SizedBox(width: 8.0),
-                                    Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Color(0xFF4287F5),
-                                      size: 20.0,
-                                    ),
-                                  ],
+                                      SizedBox(width: 8.0),
+                                      Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Color(0xFF4287F5),
+                                        size: 20.0,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -229,7 +254,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Raggio',
+                              'Distanza',
                               style: FlutterFlowTheme.of(context).bodySmall.override(
                                 font: GoogleFonts.dmSans(),
                                 color: FlutterFlowTheme.of(context).secondaryText,
@@ -238,33 +263,55 @@ class _RankingWidgetState extends State<RankingWidget> {
                               ),
                             ),
                             SizedBox(height: 4.0),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xFFDBEAFE),
-                                borderRadius: BorderRadius.circular(12.0),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      '2 km',
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight: FontWeight.w600,
+                            InkWell(
+                              onTap: () async {
+                                final result = await showModalBottomSheet<Map<String, dynamic>>(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  enableDrag: true,
+                                  builder: (context) {
+                                    return Container(
+                                      height: MediaQuery.of(context).size.height * 0.8,
+                                      child: SelezioneRaggioWidget(),
+                                    );
+                                  },
+                                );
+                                
+                                if (result != null) {
+                                  setState(() {
+                                    _model.raggioSelezionato = result['raggioText'] as String;
+                                  });
+                                }
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFDBEAFE),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        _model.raggioSelezionato,
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          color: Color(0xFF4287F5),
+                                          letterSpacing: 0.0,
                                         ),
-                                        color: Color(0xFF4287F5),
-                                        letterSpacing: 0.0,
                                       ),
-                                    ),
-                                    SizedBox(width: 8.0),
-                                    Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Color(0xFF4287F5),
-                                      size: 20.0,
-                                    ),
-                                  ],
+                                      SizedBox(width: 8.0),
+                                      Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Color(0xFF4287F5),
+                                        size: 20.0,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -286,33 +333,55 @@ class _RankingWidgetState extends State<RankingWidget> {
                               ),
                             ),
                             SizedBox(height: 4.0),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xFFDBEAFE),
-                                borderRadius: BorderRadius.circular(12.0),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      'Tutti',
-                                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                        font: GoogleFonts.dmSans(
-                                          fontWeight: FontWeight.w600,
+                            InkWell(
+                              onTap: () async {
+                                final result = await showModalBottomSheet<Map<String, dynamic>>(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  enableDrag: true,
+                                  builder: (context) {
+                                    return Container(
+                                      height: MediaQuery.of(context).size.height * 0.8,
+                                      child: SelezioneCategorieWidget(),
+                                    );
+                                  },
+                                );
+                                
+                                if (result != null) {
+                                  setState(() {
+                                    _model.categoriaSelezionata = result['categoria'] as String;
+                                  });
+                                }
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xFFDBEAFE),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Text(
+                                        _model.categoriaSelezionata,
+                                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                          font: GoogleFonts.dmSans(
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                          color: Color(0xFF4287F5),
+                                          letterSpacing: 0.0,
                                         ),
-                                        color: Color(0xFF4287F5),
-                                        letterSpacing: 0.0,
                                       ),
-                                    ),
-                                    SizedBox(width: 8.0),
-                                    Icon(
-                                      Icons.keyboard_arrow_down,
-                                      color: Color(0xFF4287F5),
-                                      size: 20.0,
-                                    ),
-                                  ],
+                                      SizedBox(width: 8.0),
+                                      Icon(
+                                        Icons.keyboard_arrow_down,
+                                        color: Color(0xFF4287F5),
+                                        size: 20.0,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

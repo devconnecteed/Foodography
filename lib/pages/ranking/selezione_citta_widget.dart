@@ -18,18 +18,18 @@ class _SelezioneCittaWidgetState extends State<SelezioneCittaWidget> {
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
-  // Lista delle città italiane
+  // Lista delle città italiane con immagini
   final List<Map<String, dynamic>> citta = [
-    {'id': 'roma', 'nome': 'Roma', 'regione': 'Lazio', 'selezionata': true},
-    {'id': 'milano', 'nome': 'Milano', 'regione': 'Lombardia', 'selezionata': false},
-    {'id': 'napoli', 'nome': 'Napoli', 'regione': 'Campania', 'selezionata': false},
-    {'id': 'torino', 'nome': 'Torino', 'regione': 'Piemonte', 'selezionata': false},
-    {'id': 'firenze', 'nome': 'Firenze', 'regione': 'Toscana', 'selezionata': false},
-    {'id': 'bologna', 'nome': 'Bologna', 'regione': 'Emilia-Romagna', 'selezionata': false},
-    {'id': 'venezia', 'nome': 'Venezia', 'regione': 'Veneto', 'selezionata': false},
-    {'id': 'genova', 'nome': 'Genova', 'regione': 'Liguria', 'selezionata': false},
-    {'id': 'bari', 'nome': 'Bari', 'regione': 'Puglia', 'selezionata': false},
-    {'id': 'palermo', 'nome': 'Palermo', 'regione': 'Sicilia', 'selezionata': false},
+    {'id': 'roma', 'nome': 'Roma', 'regione': 'Lazio', 'selezionata': true, 'immagine': 'assets/images/roma.jpg'},
+    {'id': 'milano', 'nome': 'Milano', 'regione': 'Lombardia', 'selezionata': false, 'immagine': 'assets/images/milano.jpg'},
+    {'id': 'napoli', 'nome': 'Napoli', 'regione': 'Campania', 'selezionata': false, 'immagine': 'assets/images/napoli.jpg'},
+    {'id': 'torino', 'nome': 'Torino', 'regione': 'Piemonte', 'selezionata': false, 'immagine': 'assets/images/torino.jpg'},
+    {'id': 'firenze', 'nome': 'Firenze', 'regione': 'Toscana', 'selezionata': false, 'immagine': 'assets/images/firenze.jpg'},
+    {'id': 'bologna', 'nome': 'Bologna', 'regione': 'Emilia-Romagna', 'selezionata': false, 'immagine': 'assets/images/bologna.jpg'},
+    {'id': 'venezia', 'nome': 'Venezia', 'regione': 'Veneto', 'selezionata': false, 'immagine': 'assets/images/venezia.jpg'},
+    {'id': 'genova', 'nome': 'Genova', 'regione': 'Liguria', 'selezionata': false, 'immagine': 'assets/images/genova.jpg'},
+    {'id': 'bari', 'nome': 'Bari', 'regione': 'Puglia', 'selezionata': false, 'immagine': 'assets/images/bari.jpg'},
+    {'id': 'palermo', 'nome': 'Palermo', 'regione': 'Sicilia', 'selezionata': false, 'immagine': 'assets/images/palermo.jpg'},
   ];
 
   @override
@@ -154,26 +154,33 @@ class _SelezioneCittaWidgetState extends State<SelezioneCittaWidget> {
                           borderRadius: BorderRadius.circular(20.0),
                           child: Stack(
                             children: [
-                              // Immagine di sfondo
+                              // Immagine di sfondo della città
                               Positioned.fill(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topCenter,
-                                      end: Alignment.bottomCenter,
-                                      colors: [
-                                        Color(0xFF4287F5).withOpacity(0.1),
-                                        Color(0xFF4287F5).withOpacity(0.3),
-                                      ],
-                                    ),
-                                  ),
-                                  child: Icon(
-                                    Icons.location_city,
-                                    color: isSelected 
-                                      ? Color(0xFF4287F5)
-                                      : Color(0xFF4287F5).withOpacity(0.6),
-                                    size: 48.0,
-                                  ),
+                                child: Image.asset(
+                                  cittaItem['immagine'],
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    // Fallback se l'immagine non viene caricata
+                                    return Container(
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          begin: Alignment.topCenter,
+                                          end: Alignment.bottomCenter,
+                                          colors: [
+                                            Color(0xFF4287F5).withOpacity(0.1),
+                                            Color(0xFF4287F5).withOpacity(0.3),
+                                          ],
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        Icons.location_city,
+                                        color: isSelected 
+                                          ? Color(0xFF4287F5)
+                                          : Color(0xFF4287F5).withOpacity(0.6),
+                                        size: 48.0,
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
                               
@@ -224,6 +231,7 @@ class _SelezioneCittaWidgetState extends State<SelezioneCittaWidget> {
                                         style: FlutterFlowTheme.of(context).bodySmall.override(
                                           font: GoogleFonts.dmSans(),
                                           color: Colors.white.withOpacity(0.8),
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
                                         ),
                                       ),
@@ -284,13 +292,13 @@ class _SelezioneCittaWidgetState extends State<SelezioneCittaWidget> {
                           font: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w600,
                           ),
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                          color: Color(0xFF4287F5),
                           letterSpacing: 0.0,
                         ),
                         elevation: 0.0,
                         borderSide: BorderSide(
-                          color: FlutterFlowTheme.of(context).alternate,
-                          width: 1.0,
+                          color: Colors.transparent,
+                          width: 0.0,
                         ),
                         borderRadius: BorderRadius.circular(12.0),
                       ),

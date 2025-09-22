@@ -17,6 +17,7 @@ Ho creato una modale per la selezione della città che si apre quando si clicca 
 - ✅ **10 Città**: Roma, Milano, Napoli, Torino, Firenze, Bologna, Venezia, Genova, Bari, Palermo
 - ✅ **Layout Griglia**: 2 città per riga (5 righe)
 - ✅ **Card Design**: Identiche alle card della home page
+- ✅ **Immagini Specifiche**: Ogni città ha la sua immagine dagli assets
 - ✅ **Selezione**: Una città alla volta
 - ✅ **Feedback Visivo**: Check circle per città selezionata
 
@@ -91,27 +92,35 @@ class RankingModel extends FlutterFlowModel<RankingWidget> {
 
 ### **Griglia Città (2x5)**
 - **Card Design**: Identiche alle card della home page
-- **Gradiente**: Sfondo blu con gradiente
-- **Icona**: location_city grande al centro
-- **Testo**: Nome città e regione in basso su gradiente scuro
+- **Immagini**: Ogni città ha la sua immagine specifica dagli assets
+- **Fallback**: Gradiente blu se immagine non caricata
+- **Testo**: Nome città e regione (14px) in basso su gradiente scuro
 - **Selezione**: Check circle blu in alto a destra
 - **Ombra**: BoxShadow per profondità
 
 ### **Bottoni in Fondo**
-- **Annulla**: Terziario con bordo, testo grigio
+- **Annulla**: Trasparente senza bordo, testo #4287F5
 - **Conferma**: Primario #4287F5 con testo #EFF6FF
 - **Layout**: Allineati orizzontalmente con spacing
 
 ### **Stati Visivi**
 ```dart
-// Card città non selezionata
-gradient: Color(0xFF4287F5).withOpacity(0.1) -> Color(0xFF4287F5).withOpacity(0.3)
-icon: Color(0xFF4287F5).withOpacity(0.6)
+// Card città con immagine
+image: Image.asset(cittaItem['immagine'], fit: BoxFit.cover)
+fallback: Gradiente blu se immagine non caricata
+check: Container blu con icona bianca se selezionata
 
-// Card città selezionata
-gradient: Color(0xFF4287F5).withOpacity(0.1) -> Color(0xFF4287F5).withOpacity(0.3)
-icon: Color(0xFF4287F5)
-check: Container blu con icona bianca
+// Immagini disponibili
+roma: assets/images/roma.jpg
+milano: assets/images/milano.jpg
+napoli: assets/images/napoli.jpg
+torino: assets/images/torino.jpg
+firenze: assets/images/firenze.jpg
+bologna: assets/images/bologna.jpg
+venezia: assets/images/venezia.jpg
+genova: assets/images/genova.jpg
+bari: assets/images/bari.jpg
+palermo: assets/images/palermo.jpg
 ```
 
 ## 📱 **Come Testare**
@@ -123,9 +132,10 @@ check: Container blu con icona bianca
 
 ### **2. Selezionare una Città**
 1. **Sfoglia la griglia** delle città italiane (2 per riga)
-2. **Tocca una città** per selezionarla
-3. **Verifica l'evidenziazione** (check circle blu in alto a destra)
-4. **Tocca "Conferma"** per applicare la selezione
+2. **Osserva le immagini** specifiche di ogni città
+3. **Tocca una città** per selezionarla
+4. **Verifica l'evidenziazione** (check circle blu in alto a destra)
+5. **Tocca "Conferma"** per applicare la selezione
 
 ### **3. Verificare il Risultato**
 1. **La modale si chiude** automaticamente
@@ -170,6 +180,7 @@ if (result != null) {
 **La modale di selezione città è completamente funzionante:**
 - ✅ **Apertura**: Clic sulla chip "Roma" nella classifica
 - ✅ **10 Città Italiane**: Griglia 2x5 con regioni
+- ✅ **Immagini Specifiche**: Ogni città ha la sua immagine dagli assets
 - ✅ **Card Design**: Identiche alle card della home page
 - ✅ **Selezione Interattiva**: Tap per selezionare
 - ✅ **Conferma**: Pulsanti "Annulla" e "Conferma" in fondo
