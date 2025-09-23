@@ -24,8 +24,8 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 
-  static _MyAppState of(BuildContext context) =>
-      context.findAncestorStateOfType<_MyAppState>()!;
+  static _MyAppState? of(BuildContext context) =>
+      context.findAncestorStateOfType<_MyAppState>();
 }
 
 class MyAppScrollBehavior extends MaterialScrollBehavior {
@@ -38,7 +38,6 @@ class MyAppScrollBehavior extends MaterialScrollBehavior {
 
 class _MyAppState extends State<MyApp> {
   Locale? _locale;
-
   ThemeMode _themeMode = ThemeMode.system;
 
   late AppStateNotifier _appStateNotifier;
@@ -71,6 +70,7 @@ class _MyAppState extends State<MyApp> {
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
       });
+
 
   @override
   Widget build(BuildContext context) {
@@ -163,7 +163,7 @@ class _NavBarPageState extends State<NavBarPage> {
           data: queryData
               .removeViewInsets(removeBottom: true)
               .removeViewPadding(removeBottom: true),
-          child: _currentPage ?? tabs[_currentPageName]!),
+          child: _currentPage ?? tabs[_currentPageName] ?? Container()),
       extendBody: true,
       bottomNavigationBar: _currentPageName == 'Camera' ? null : Padding(
         padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),

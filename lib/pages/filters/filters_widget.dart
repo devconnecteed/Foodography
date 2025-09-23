@@ -305,14 +305,14 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                               value: _model.checkboxValue1 ??= true,
                               onChanged: (newValue) async {
                                 safeSetState(
-                                    () => _model.checkboxValue1 = newValue!);
+                                    () => _model.checkboxValue1 = newValue ?? false);
                               },
                               side: (FlutterFlowTheme.of(context).alternate !=
                                       null)
                                   ? BorderSide(
                                       width: 2,
                                       color:
-                                          FlutterFlowTheme.of(context).alternate!,
+                                          FlutterFlowTheme.of(context).alternate ?? Colors.grey,
                                     )
                                   : null,
                               activeColor: FlutterFlowTheme.of(context).primary,
@@ -370,14 +370,14 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                               value: _model.checkboxValue2 ??= true,
                               onChanged: (newValue) async {
                                 safeSetState(
-                                    () => _model.checkboxValue2 = newValue!);
+                                    () => _model.checkboxValue2 = newValue ?? false);
                               },
                               side: (FlutterFlowTheme.of(context).alternate !=
                                       null)
                                   ? BorderSide(
                                       width: 2,
                                       color:
-                                          FlutterFlowTheme.of(context).alternate!,
+                                          FlutterFlowTheme.of(context).alternate ?? Colors.grey,
                                     )
                                   : null,
                               activeColor: FlutterFlowTheme.of(context).primary,
@@ -435,14 +435,14 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                               value: _model.checkboxValue3 ??= false,
                               onChanged: (newValue) async {
                                 safeSetState(
-                                    () => _model.checkboxValue3 = newValue!);
+                                    () => _model.checkboxValue3 = newValue ?? false);
                               },
                               side: (FlutterFlowTheme.of(context).secondary !=
                                       null)
                                   ? BorderSide(
                                       width: 2,
                                       color:
-                                          FlutterFlowTheme.of(context).secondary!,
+                                          FlutterFlowTheme.of(context).secondary ?? Colors.grey,
                                     )
                                   : null,
                               activeColor: FlutterFlowTheme.of(context).primary,
@@ -535,7 +535,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                     value: _model.checkboxValue4 ??= true,
                                     onChanged: (newValue) async {
                                       safeSetState(() =>
-                                          _model.checkboxValue4 = newValue!);
+                                          _model.checkboxValue4 = newValue ?? false);
                                     },
                                     side: (FlutterFlowTheme.of(context)
                                                 .alternate !=
@@ -610,7 +610,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                     value: _model.checkboxValue5 ??= true,
                                     onChanged: (newValue) async {
                                       safeSetState(() =>
-                                          _model.checkboxValue5 = newValue!);
+                                          _model.checkboxValue5 = newValue ?? false);
                                     },
                                     side: (FlutterFlowTheme.of(context)
                                                 .alternate !=
@@ -689,7 +689,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                     value: _model.checkboxValue6 ??= true,
                                     onChanged: (newValue) async {
                                       safeSetState(() =>
-                                          _model.checkboxValue6 = newValue!);
+                                          _model.checkboxValue6 = newValue ?? false);
                                     },
                                     side: (FlutterFlowTheme.of(context)
                                                 .alternate !=
@@ -764,7 +764,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                     value: _model.checkboxValue7 ??= true,
                                     onChanged: (newValue) async {
                                       safeSetState(() =>
-                                          _model.checkboxValue7 = newValue!);
+                                          _model.checkboxValue7 = newValue ?? false);
                                     },
                                     side: (FlutterFlowTheme.of(context)
                                                 .alternate !=
@@ -1015,14 +1015,14 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 value: _model.checkboxValue8 ??= true,
                                 onChanged: (newValue) async {
                                   safeSetState(
-                                      () => _model.checkboxValue8 = newValue!);
+                                      () => _model.checkboxValue8 = newValue ?? false);
                                 },
                                 side: (FlutterFlowTheme.of(context).alternate !=
                                         null)
                                     ? BorderSide(
                                         width: 2,
                                         color:
-                                            FlutterFlowTheme.of(context).alternate!,
+                                            FlutterFlowTheme.of(context).alternate ?? Colors.grey,
                                       )
                                     : null,
                                 activeColor: FlutterFlowTheme.of(context).primary,
@@ -1087,14 +1087,14 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 value: _model.checkboxValue9 ??= false,
                                 onChanged: (newValue) async {
                                   safeSetState(
-                                      () => _model.checkboxValue9 = newValue!);
+                                      () => _model.checkboxValue9 = newValue ?? false);
                                 },
                                 side: (FlutterFlowTheme.of(context).alternate !=
                                         null)
                                     ? BorderSide(
                                         width: 2,
                                         color:
-                                            FlutterFlowTheme.of(context).alternate!,
+                                            FlutterFlowTheme.of(context).alternate ?? Colors.grey,
                                       )
                                     : null,
                                 activeColor: FlutterFlowTheme.of(context).secondary,
@@ -1166,14 +1166,14 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 value: _model.checkboxValue10 ??= false,
                                 onChanged: (newValue) async {
                                   safeSetState(
-                                      () => _model.checkboxValue10 = newValue!);
+                                      () => _model.checkboxValue10 = newValue ?? false);
                                 },
                                 side: (FlutterFlowTheme.of(context).alternate !=
                                         null)
                                     ? BorderSide(
                                         width: 2,
                                         color:
-                                            FlutterFlowTheme.of(context).alternate!,
+                                            FlutterFlowTheme.of(context).alternate ?? Colors.grey,
                                       )
                                     : null,
                                 activeColor: FlutterFlowTheme.of(context).secondary,
@@ -1238,14 +1238,14 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                                 value: _model.checkboxValue11 ??= false,
                                 onChanged: (newValue) async {
                                   safeSetState(
-                                      () => _model.checkboxValue11 = newValue!);
+                                      () => _model.checkboxValue11 = newValue ?? false);
                                 },
                                 side: (FlutterFlowTheme.of(context).alternate !=
                                         null)
                                     ? BorderSide(
                                         width: 2,
                                         color:
-                                            FlutterFlowTheme.of(context).alternate!,
+                                            FlutterFlowTheme.of(context).alternate ?? Colors.grey,
                                       )
                                     : null,
                                 activeColor: FlutterFlowTheme.of(context).secondary,

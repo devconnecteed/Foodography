@@ -460,7 +460,7 @@ class _RankingWidgetState extends State<RankingWidget> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(25.0),
               child: Image.asset(
-                dish['image']!,
+                dish['image'] ?? 'assets/images/favicon.png',
                 width: 50.0,
                 height: 50.0,
                 fit: BoxFit.cover,
@@ -475,7 +475,7 @@ class _RankingWidgetState extends State<RankingWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  dish['name']!,
+                  dish['name'] ?? 'Nome non disponibile',
                   style: FlutterFlowTheme.of(context).titleMedium.override(
                     font: GoogleFonts.dmSans(
                       fontWeight: FontWeight.w500,
@@ -496,7 +496,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                       ),
                       SizedBox(width: 4.0),
                       Text(
-                        dish['location']!,
+                        dish['location'] ?? 'Location non disponibile',
                         style: FlutterFlowTheme.of(context).bodySmall.override(
                           font: GoogleFonts.dmSans(),
                           color: FlutterFlowTheme.of(context).secondaryText,
@@ -508,7 +508,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                 ] else if (dish['evaluations'] != null) ...[
                   SizedBox(height: 4.0),
                   Text(
-                    dish['evaluations']!,
+                    dish['evaluations'] ?? 'Valutazioni non disponibili',
                     style: FlutterFlowTheme.of(context).bodySmall.override(
                       font: GoogleFonts.dmSans(),
                       color: FlutterFlowTheme.of(context).secondaryText,
@@ -521,7 +521,7 @@ class _RankingWidgetState extends State<RankingWidget> {
           ),
           // Rating
           Text(
-            dish['rating']!,
+            dish['rating'] ?? 'N/A',
             style: FlutterFlowTheme.of(context).headlineSmall.override(
               font: GoogleFonts.dmSans(
                 fontWeight: FontWeight.bold,

@@ -14,6 +14,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'serialization_util.dart';
 
 import '/index.dart';
+import '/pages/splash_screen/splash_screen_widget.dart';
 import '/pages/ranking/ranking_widget.dart';
 import '/pages/scatta_foto/scatta_foto_widget.dart';
 import '/pages/posizione_attuale/posizione_attuale_widget.dart';
@@ -49,7 +50,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => Onboarding01Widget(),
+          builder: (context, _) => SplashScreenWidget(),
+        ),
+        FFRoute(
+          name: SplashScreenWidget.routeName,
+          path: SplashScreenWidget.routePath,
+          builder: (context, params) => SplashScreenWidget(),
         ),
         FFRoute(
           name: Onboarding01Widget.routeName,

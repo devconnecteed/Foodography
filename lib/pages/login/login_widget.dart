@@ -249,7 +249,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   Checkbox(
                                     value: _model.rememberMe ?? false,
                                     onChanged: (newValue) async {
-                                      safeSetState(() => _model.rememberMe = newValue!);
+                                      safeSetState(() => _model.rememberMe = newValue ?? false);
                                     },
                                     side: BorderSide(
                                       width: 2,

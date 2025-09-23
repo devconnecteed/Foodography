@@ -276,11 +276,19 @@ extension IterableExt<T> on Iterable<T> {
       .toList();
 }
 
-void setAppLanguage(BuildContext context, String language) =>
-    MyApp.of(context).setLocale(language);
+void setAppLanguage(BuildContext context, String language) {
+  final myApp = MyApp.of(context);
+  if (myApp != null) {
+    myApp.setLocale(language);
+  }
+}
 
-void setDarkModeSetting(BuildContext context, ThemeMode themeMode) =>
-    MyApp.of(context).setThemeMode(themeMode);
+void setDarkModeSetting(BuildContext context, ThemeMode themeMode) {
+  final myApp = MyApp.of(context);
+  if (myApp != null) {
+    myApp.setThemeMode(themeMode);
+  }
+}
 
 void showSnackbar(
   BuildContext context,
@@ -457,7 +465,14 @@ extension ListUniqueExt<T> on Iterable<T> {
   }
 }
 
-String getCurrentRoute(BuildContext context) =>
-    context.mounted ? MyApp.of(context).getRoute() : '';
-List<String> getCurrentRouteStack(BuildContext context) =>
-    context.mounted ? MyApp.of(context).getRouteStack() : [];
+String getCurrentRoute(BuildContext context) {
+  if (!context.mounted) return '';
+  final myApp = MyApp.of(context);
+  return myApp?.getRoute() ?? '';
+}
+
+List<String> getCurrentRouteStack(BuildContext context) {
+  if (!context.mounted) return [];
+  final myApp = MyApp.of(context);
+  return myApp?.getRouteStack() ?? [];
+}
