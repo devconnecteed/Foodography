@@ -105,7 +105,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               font: GoogleFonts.dmSans(
                                 fontWeight: FontWeight.bold,
                               ),
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               letterSpacing: 0.0,
                             ),
                           ),
@@ -139,7 +139,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0xFF4287F5),
+                                  color: FlutterFlowTheme.of(context).primary,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
@@ -194,7 +194,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0xFF4287F5),
+                                  color: FlutterFlowTheme.of(context).primary,
                                   width: 2.0,
                                 ),
                                 borderRadius: BorderRadius.circular(12.0),
@@ -255,7 +255,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       width: 2,
                                       color: Color(0xFF9CA3AF),
                                     ),
-                                    activeColor: Color(0xFF4287F5),
+                                    activeColor: FlutterFlowTheme.of(context).primary,
                                     checkColor: Colors.white,
                                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                     visualDensity: VisualDensity.compact,
@@ -283,7 +283,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   'Ho dimenticato la password',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.dmSans(),
-                                    color: Color(0xFF4287F5),
+                                    color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
                                     decoration: TextDecoration.underline,
                                   ),
@@ -307,7 +307,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               height: 52.0,
                               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context).titleMedium.override(
                                 font: GoogleFonts.dmSans(
                                   fontWeight: FontWeight.w600,
@@ -342,7 +342,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   'Registrati qui',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.dmSans(),
-                                    color: Color(0xFF4287F5),
+                                    color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
                                     decoration: TextDecoration.underline,
                                   ),

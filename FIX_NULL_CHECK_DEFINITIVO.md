@@ -153,7 +153,7 @@ void _navigateToMainApp() {
 ### **✅ Design Elements**
 - **Logo**: Icona ristorante con colore brand
 - **Typography**: Nome app con letter spacing
-- **Colors**: Palette brand (#4287F5)
+- **Colors**: Palette brand (#2E7D32)
 - **Layout**: Centrato e bilanciato
 
 ### **✅ Timing**

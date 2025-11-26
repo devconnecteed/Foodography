@@ -42,8 +42,8 @@ Ho creato con successo la modale per la selezione delle categorie identica a que
 - ✅ **Aggiornamento**: In tempo reale
 
 ### **7. Bottoni CTA**
-- ✅ **Annulla**: Trasparente, testo blu (#4287F5)
-- ✅ **Conferma**: Sfondo blu (#4287F5), testo bianco (#EFF6FF)
+- ✅ **Annulla**: Trasparente, testo blu (#2E7D32)
+- ✅ **Conferma**: Sfondo blu (#2E7D32), testo bianco (#EFF6FF)
 - ✅ **Layout**: Allineati orizzontalmente
 
 ## 🏗️ **Implementazione Tecnica**

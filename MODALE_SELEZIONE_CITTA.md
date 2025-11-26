@@ -23,7 +23,7 @@ Ho creato una modale per la selezione della città che si apre quando si clicca 
 
 ### **3. Controlli Utente**
 - ✅ **Pulsante Annulla**: Terziario a sinistra
-- ✅ **Pulsante Conferma**: Primario a destra (#4287F5 con testo #EFF6FF)
+- ✅ **Pulsante Conferma**: Primario a destra (#2E7D32 con testo #EFF6FF)
 - ✅ **Tap Città**: Selezione diretta toccando la città
 - ✅ **Navigazione**: Ritorno alla pagina ranking
 
@@ -99,8 +99,8 @@ class RankingModel extends FlutterFlowModel<RankingWidget> {
 - **Ombra**: BoxShadow per profondità
 
 ### **Bottoni in Fondo**
-- **Annulla**: Trasparente senza bordo, testo #4287F5
-- **Conferma**: Primario #4287F5 con testo #EFF6FF
+- **Annulla**: Trasparente senza bordo, testo #2E7D32
+- **Conferma**: Primario #2E7D32 con testo #EFF6FF
 - **Layout**: Allineati orizzontalmente con spacing
 
 ### **Stati Visivi**

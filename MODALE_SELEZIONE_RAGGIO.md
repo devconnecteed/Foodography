@@ -20,7 +20,7 @@ Ho creato con successo la modale per la selezione della distanza con preset rapi
 ### **3. Slider Interattivo**
 - ✅ **Range**: Da 0.5 km a 10 km
 - ✅ **Divisioni**: 19 step (0.5 km per step)
-- ✅ **Colore**: Blu (#4287F5) per track attivo e thumb
+- ✅ **Colore**: Blu (#2E7D32) per track attivo e thumb
 - ✅ **Track Height**: 4px
 - ✅ **Thumb Radius**: 12px
 
@@ -41,8 +41,8 @@ Ho creato con successo la modale per la selezione della distanza con preset rapi
 - ✅ **Colore**: Grigio (#6B7280)
 
 ### **7. Bottoni CTA**
-- ✅ **Annulla**: Trasparente, testo blu (#4287F5)
-- ✅ **Conferma**: Sfondo blu (#4287F5), testo bianco (#EFF6FF)
+- ✅ **Annulla**: Trasparente, testo blu (#2E7D32)
+- ✅ **Conferma**: Sfondo blu (#2E7D32), testo bianco (#EFF6FF)
 - ✅ **Layout**: Allineati orizzontalmente
 
 ## 🏗️ **Implementazione Tecnica**

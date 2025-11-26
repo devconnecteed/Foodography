@@ -8,7 +8,7 @@ Ho aggiornato lo stile della modale di selezione città secondo le specifiche ri
 
 ### **1. Pulsante "Annulla" Aggiornato**
 - ✅ **Rimosso bordo**: `borderSide: BorderSide(color: Colors.transparent, width: 0.0)`
-- ✅ **Colore testo**: Cambiato da grigio a `#4287F5`
+- ✅ **Colore testo**: Cambiato da grigio a `#2E7D32`
 - ✅ **Sfondo**: Mantenuto trasparente
 - ✅ **Stile**: Più pulito e moderno
 
@@ -68,7 +68,7 @@ Text(
 - Testo regioni: Dimensione predefinita (12px)
 
 ### **Dopo le Modifiche**
-- Pulsante "Annulla": Senza bordo, testo blu #4287F5
+- Pulsante "Annulla": Senza bordo, testo blu #2E7D32
 - Testo regioni: Dimensione 14px per migliore leggibilità
 
 ## 📱 **Come Testare**
@@ -77,7 +77,7 @@ Text(
 2. **Clicca sulla chip "Roma"**
 3. **Verifica il pulsante "Annulla"**:
    - Nessun bordo visibile
-   - Testo di colore blu #4287F5
+   - Testo di colore blu #2E7D32
 4. **Verifica il testo delle regioni**:
    - Dimensione 14px nelle card
    - Leggibilità migliorata
@@ -92,7 +92,7 @@ Text(
 ## 🎯 **Status Finale**
 
 **Le modifiche di stile sono state implementate con successo:**
-- ✅ **Pulsante Annulla**: Senza bordo, testo #4287F5
+- ✅ **Pulsante Annulla**: Senza bordo, testo #2E7D32
 - ✅ **Testo Regioni**: Dimensione 14px
 - ✅ **Design Coerente**: Stile moderno e pulito
 - ✅ **Funzionalità**: Invariata e funzionante

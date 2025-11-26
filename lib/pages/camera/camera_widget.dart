@@ -281,7 +281,7 @@ class _CameraWidgetState extends State<CameraWidget>
                                                             .titleSmall
                                                             .fontStyle,
                                                       ),
-                                                      color: Color(0xFF4287F5),
+                                                      color: FlutterFlowTheme.of(context).primary,
                                                       letterSpacing:
                                                           0.0,
                                                       fontWeight:

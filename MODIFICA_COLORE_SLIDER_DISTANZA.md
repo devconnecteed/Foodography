@@ -39,13 +39,13 @@ SliderTheme(
 ## 🎨 **Risultato Visivo**
 
 ### **Prima della Modifica**
-- **Barra attiva**: Blu (#4287F5)
+- **Barra attiva**: Blu (#2E7D32)
 - **Barra inattiva**: Grigio (#E5E7EB)
 - **Tick marks**: Grigio (#E5E7EB)
 - **Contrasto**: Standard Material Design
 
 ### **Dopo la Modifica**
-- **Barra attiva**: Blu (#4287F5) ✅
+- **Barra attiva**: Blu (#2E7D32) ✅
 - **Barra inattiva**: Blu chiaro (#EFF6FF) ✅
 - **Tick marks**: Blu chiaro (#EFF6FF) ✅
 - **Contrasto**: Coerente con tema blu ✅
@@ -54,9 +54,9 @@ SliderTheme(
 
 | Elemento | Prima | Dopo |
 |----------|-------|------|
-| **Barra Attiva** | #4287F5 | **#4287F5** (invariato) |
+| **Barra Attiva** | #2E7D32 | **#2E7D32** (invariato) |
 | **Barra Inattiva** | #E5E7EB | **#EFF6FF** |
-| **Tick Attivi** | #4287F5 | **#4287F5** (invariato) |
+| **Tick Attivi** | #2E7D32 | **#2E7D32** (invariato) |
 | **Tick Inattivi** | #E5E7EB | **#EFF6FF** |
 | **Coerenza** | Standard | **Tema Blu** |
 

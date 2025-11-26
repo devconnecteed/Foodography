@@ -146,7 +146,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                               },
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFDBEAFE),
+                                  color: FlutterFlowTheme.of(context).secondary,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Padding(
@@ -160,14 +160,14 @@ class _RankingWidgetState extends State<RankingWidget> {
                                           font: GoogleFonts.dmSans(
                                             fontWeight: FontWeight.w600,
                                           ),
-                                          color: Color(0xFF4287F5),
+                                          color: FlutterFlowTheme.of(context).primary,
                                           letterSpacing: 0.0,
                                         ),
                                       ),
                                       SizedBox(width: 8.0),
                                       Icon(
                                         Icons.keyboard_arrow_down,
-                                        color: Color(0xFF4287F5),
+                                        color: FlutterFlowTheme.of(context).primary,
                                         size: 20.0,
                                       ),
                                     ],
@@ -216,7 +216,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                               },
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFDBEAFE),
+                                  color: FlutterFlowTheme.of(context).secondary,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Padding(
@@ -230,14 +230,14 @@ class _RankingWidgetState extends State<RankingWidget> {
                                           font: GoogleFonts.dmSans(
                                             fontWeight: FontWeight.w600,
                                           ),
-                                          color: Color(0xFF4287F5),
+                                          color: FlutterFlowTheme.of(context).primary,
                                           letterSpacing: 0.0,
                                         ),
                                       ),
                                       SizedBox(width: 8.0),
                                       Icon(
                                         Icons.keyboard_arrow_down,
-                                        color: Color(0xFF4287F5),
+                                        color: FlutterFlowTheme.of(context).primary,
                                         size: 20.0,
                                       ),
                                     ],
@@ -286,7 +286,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                               },
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFDBEAFE),
+                                  color: FlutterFlowTheme.of(context).secondary,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Padding(
@@ -300,14 +300,14 @@ class _RankingWidgetState extends State<RankingWidget> {
                                           font: GoogleFonts.dmSans(
                                             fontWeight: FontWeight.w600,
                                           ),
-                                          color: Color(0xFF4287F5),
+                                          color: FlutterFlowTheme.of(context).primary,
                                           letterSpacing: 0.0,
                                         ),
                                       ),
                                       SizedBox(width: 8.0),
                                       Icon(
                                         Icons.keyboard_arrow_down,
-                                        color: Color(0xFF4287F5),
+                                        color: FlutterFlowTheme.of(context).primary,
                                         size: 20.0,
                                       ),
                                     ],
@@ -356,7 +356,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                               },
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFDBEAFE),
+                                  color: FlutterFlowTheme.of(context).secondary,
                                   borderRadius: BorderRadius.circular(12.0),
                                 ),
                                 child: Padding(
@@ -370,14 +370,14 @@ class _RankingWidgetState extends State<RankingWidget> {
                                           font: GoogleFonts.dmSans(
                                             fontWeight: FontWeight.w600,
                                           ),
-                                          color: Color(0xFF4287F5),
+                                          color: FlutterFlowTheme.of(context).primary,
                                           letterSpacing: 0.0,
                                         ),
                                       ),
                                       SizedBox(width: 8.0),
                                       Icon(
                                         Icons.keyboard_arrow_down,
-                                        color: Color(0xFF4287F5),
+                                        color: FlutterFlowTheme.of(context).primary,
                                         size: 20.0,
                                       ),
                                     ],
@@ -443,7 +443,7 @@ class _RankingWidgetState extends State<RankingWidget> {
                 font: GoogleFonts.dmSans(
                   fontWeight: FontWeight.bold,
                 ),
-              color: Color(0xFF172554),
+              color: FlutterFlowTheme.of(context).secondary,
               letterSpacing: 0.0,
               ),
             ),

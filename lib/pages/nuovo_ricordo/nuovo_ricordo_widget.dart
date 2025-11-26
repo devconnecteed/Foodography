@@ -280,7 +280,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color(0xFF4287F5),
+            color: FlutterFlowTheme.of(context).primary,
             width: 2.0,
           ),
           borderRadius: BorderRadius.circular(12.0),
@@ -336,7 +336,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
                 child: CustomPaint(
                   size: Size(32.0, 32.0),
                   painter: RoundedStarPainter(
-                    color: index < currentRating ? Color(0xFF4287F5) : Color(0xFFEFF6FF),
+                    color: index < currentRating ? FlutterFlowTheme.of(context).primary : Color(0xFFE6F3E6),
                   ),
                 ),
               ),
@@ -367,7 +367,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color(0xFF4287F5),
+            color: FlutterFlowTheme.of(context).primary,
             width: 2.0,
           ),
           borderRadius: BorderRadius.circular(12.0),
@@ -399,7 +399,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
           child: Container(
             padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 8.0),
             decoration: BoxDecoration(
-              color: isSelected ? Color(0xFF4287F5) : Color(0xFFF5F5F5),
+              color: isSelected ? FlutterFlowTheme.of(context).primary : Color(0xFFF5F5F5),
               borderRadius: BorderRadius.circular(20.0),
               border: isSelected ? null : Border.all(
                 color: Color(0xFFE0E0E0),
@@ -440,7 +440,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
             children: [
               Icon(
                 Icons.play_circle_outline,
-                color: Color(0xFF4287F5),
+                color: FlutterFlowTheme.of(context).primary,
                 size: 32.0,
               ),
               SizedBox(height: 8.0),
@@ -448,7 +448,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
                 'Aggiungi anteprima',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                   font: GoogleFonts.dmSans(),
-                  color: Color(0xFF4287F5),
+                  color: FlutterFlowTheme.of(context).primary,
                   letterSpacing: 0.0,
                 ),
               ),
@@ -464,7 +464,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
       width: double.infinity,
       height: 50.0,
       decoration: BoxDecoration(
-        color: Color(0xFF4287F5),
+        color: FlutterFlowTheme.of(context).primary,
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: ElevatedButton(
@@ -529,7 +529,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color(0xFF4287F5),
+            color: FlutterFlowTheme.of(context).primary,
             width: 2.0,
           ),
           borderRadius: BorderRadius.circular(12.0),
@@ -553,7 +553,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
         contentPadding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
         suffixIcon: Icon(
           Icons.calendar_today,
-          color: Color(0xFF4287F5),
+          color: FlutterFlowTheme.of(context).primary,
           size: 20.0,
         ),
       ),
@@ -718,7 +718,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
                           Navigator.of(context).pop();
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF4287F5),
+                          backgroundColor: FlutterFlowTheme.of(context).primary,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -790,7 +790,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
           child: Container(
             height: 40,
             decoration: BoxDecoration(
-              color: isSelected ? Color(0xFFDBEAFE) : Colors.transparent,
+              color: isSelected ? FlutterFlowTheme.of(context).secondary : Colors.transparent,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Center(
@@ -798,7 +798,7 @@ class _NuovoRicordoWidgetState extends State<NuovoRicordoWidget> with TickerProv
                 day.toString(),
                 style: TextStyle(
                   color: isSelected 
-                      ? Color(0xFF2665EA) 
+                      ? FlutterFlowTheme.of(context).primary 
                       : isFuture 
                           ? Color(0xFFD1D5DB) 
                           : Color(0xFF1F2937),

@@ -154,14 +154,14 @@ class _FiltriWidgetState extends State<FiltriWidget> {
                               'Vedi altri',
                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                 font: GoogleFonts.dmSans(),
-                                color: Color(0xFF4287F5),
+                                color: FlutterFlowTheme.of(context).primary,
                                 letterSpacing: 0.0,
                               ),
                             ),
                             SizedBox(width: 4.0),
                             Icon(
                               Icons.keyboard_arrow_down,
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               size: 16.0,
                             ),
                           ],
@@ -230,7 +230,7 @@ class _FiltriWidgetState extends State<FiltriWidget> {
                                 font: GoogleFonts.dmSans(
                                   fontWeight: FontWeight.w600,
                                 ),
-                                color: Color(0xFF4287F5),
+                                color: FlutterFlowTheme.of(context).primary,
                                 letterSpacing: 0.0,
                               ),
                             ),
@@ -243,7 +243,7 @@ class _FiltriWidgetState extends State<FiltriWidget> {
                       child: Container(
                         height: 48.0,
                         decoration: BoxDecoration(
-                          color: Color(0xFF4287F5),
+                          color: FlutterFlowTheme.of(context).primary,
                           borderRadius: BorderRadius.circular(12.0),
                         ),
                         child: ElevatedButton(
@@ -337,10 +337,10 @@ class _FiltriWidgetState extends State<FiltriWidget> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: option['selected'] ? Color(0xFF4287F5) : Color(0xFFD1D5DB),
+                    color: option['selected'] ? FlutterFlowTheme.of(context).primary : Color(0xFFD1D5DB),
                     width: 2.0,
                   ),
-                  color: option['selected'] ? Color(0xFF4287F5) : Colors.transparent,
+                  color: option['selected'] ? FlutterFlowTheme.of(context).primary : Colors.transparent,
                 ),
                 child: option['selected']
                     ? Icon(
@@ -394,10 +394,10 @@ class _FiltriWidgetState extends State<FiltriWidget> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4.0),
                     border: Border.all(
-                      color: option['selected'] ? Color(0xFF4287F5) : Color(0xFFD1D5DB),
+                      color: option['selected'] ? FlutterFlowTheme.of(context).primary : Color(0xFFD1D5DB),
                       width: 2.0,
                     ),
-                    color: option['selected'] ? Color(0xFF4287F5) : Colors.transparent,
+                    color: option['selected'] ? FlutterFlowTheme.of(context).primary : Colors.transparent,
                   ),
                   child: option['selected']
                       ? Icon(
@@ -460,10 +460,10 @@ class _FiltriWidgetState extends State<FiltriWidget> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(4.0),
                   border: Border.all(
-                    color: option['selected'] ? Color(0xFF4287F5) : Color(0xFFD1D5DB),
+                    color: option['selected'] ? FlutterFlowTheme.of(context).primary : Color(0xFFD1D5DB),
                     width: 2.0,
                   ),
-                  color: option['selected'] ? Color(0xFF4287F5) : Colors.transparent,
+                  color: option['selected'] ? FlutterFlowTheme.of(context).primary : Colors.transparent,
                 ),
                 child: option['selected']
                     ? Icon(
@@ -507,7 +507,7 @@ class _FiltriWidgetState extends State<FiltriWidget> {
           child: Container(
             padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 8.0),
             decoration: BoxDecoration(
-              color: option['selected'] ? Color(0xFF4287F5) : Color(0xFFF5F5F5),
+              color: option['selected'] ? FlutterFlowTheme.of(context).primary : Color(0xFFF5F5F5),
               borderRadius: BorderRadius.circular(20.0),
               border: option['selected'] ? null : Border.all(
                 color: Color(0xFFE0E0E0),
@@ -551,10 +551,10 @@ class _FiltriWidgetState extends State<FiltriWidget> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(4.0),
                       border: Border.all(
-                        color: option['selected'] ? Color(0xFF4287F5) : Color(0xFFD1D5DB),
+                        color: option['selected'] ? FlutterFlowTheme.of(context).primary : Color(0xFFD1D5DB),
                         width: 2.0,
                       ),
-                      color: option['selected'] ? Color(0xFF4287F5) : Colors.transparent,
+                      color: option['selected'] ? FlutterFlowTheme.of(context).primary : Colors.transparent,
                     ),
                     child: option['selected']
                         ? Icon(

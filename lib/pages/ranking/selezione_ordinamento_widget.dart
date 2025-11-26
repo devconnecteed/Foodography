@@ -160,12 +160,12 @@ class _SelezioneOrdinamentoWidgetState extends State<SelezioneOrdinamentoWidget>
                                 height: 18.0,
                                 decoration: BoxDecoration(
                                   color: isSelected 
-                                    ? Color(0xFF4287F5)
+                                    ? FlutterFlowTheme.of(context).primary
                                     : Colors.transparent,
                                   shape: BoxShape.circle,
                                   border: Border.all(
                                     color: isSelected 
-                                      ? Color(0xFF4287F5)
+                                      ? FlutterFlowTheme.of(context).primary
                                       : FlutterFlowTheme.of(context).secondaryText,
                                     width: 2.0,
                                   ),
@@ -197,7 +197,7 @@ class _SelezioneOrdinamentoWidgetState extends State<SelezioneOrdinamentoWidget>
                                           fontWeight: FontWeight.w600,
                                         ),
                                         color: isSelected 
-                                          ? Color(0xFF4287F5)
+                                          ? FlutterFlowTheme.of(context).primary
                                           : FlutterFlowTheme.of(context).primaryText,
                                         letterSpacing: 0.0,
                                       ),
@@ -248,7 +248,7 @@ class _SelezioneOrdinamentoWidgetState extends State<SelezioneOrdinamentoWidget>
                           font: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w600,
                           ),
-                          color: Color(0xFF4287F5),
+                          color: FlutterFlowTheme.of(context).primary,
                           letterSpacing: 0.0,
                         ),
                         elevation: 0.0,
@@ -272,12 +272,12 @@ class _SelezioneOrdinamentoWidgetState extends State<SelezioneOrdinamentoWidget>
                         height: 48.0,
                         padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                         iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFF4287F5),
+                        color: FlutterFlowTheme.of(context).primary,
                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           font: GoogleFonts.dmSans(
                             fontWeight: FontWeight.w600,
                           ),
-                          color: Color(0xFFEFF6FF),
+                          color: Color(0xFFE6F3E6),
                           letterSpacing: 0.0,
                         ),
                         elevation: 0.0,

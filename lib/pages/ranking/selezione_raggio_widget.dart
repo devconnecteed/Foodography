@@ -46,10 +46,10 @@ class _SelezioneRaggioWidgetState extends State<SelezioneRaggioWidget> {
       child: Container(
         padding: EdgeInsetsDirectional.fromSTEB(12.0, 8.0, 12.0, 8.0),
         decoration: BoxDecoration(
-          color: isSelected ? Color(0xFF4287F5) : Color(0xFFF3F4F6),
+          color: isSelected ? FlutterFlowTheme.of(context).primary : Color(0xFFF3F4F6),
           borderRadius: BorderRadius.circular(8.0),
           border: Border.all(
-            color: isSelected ? Color(0xFF4287F5) : Color(0xFFE5E7EB),
+            color: isSelected ? FlutterFlowTheme.of(context).primary : Color(0xFFE5E7EB),
             width: 1.0,
           ),
         ),
@@ -177,7 +177,7 @@ class _SelezioneRaggioWidgetState extends State<SelezioneRaggioWidget> {
                                 font: GoogleFonts.dmSans(
                                   fontWeight: FontWeight.w600,
                                 ),
-                                color: Color(0xFF4287F5),
+                                color: FlutterFlowTheme.of(context).primary,
                                 letterSpacing: 0.0,
                               ),
                             ),
@@ -188,15 +188,15 @@ class _SelezioneRaggioWidgetState extends State<SelezioneRaggioWidget> {
                         // Slider
                         SliderTheme(
                           data: SliderTheme.of(context).copyWith(
-                            activeTrackColor: Color(0xFF4287F5),
-                            inactiveTrackColor: Color(0xFFEFF6FF),
-                            thumbColor: Color(0xFF4287F5),
-                            overlayColor: Color(0xFF4287F5).withOpacity(0.2),
+                            activeTrackColor: FlutterFlowTheme.of(context).primary,
+                            inactiveTrackColor: Color(0xFFE6F3E6),
+                            thumbColor: FlutterFlowTheme.of(context).primary,
+                            overlayColor: FlutterFlowTheme.of(context).primary.withOpacity(0.2),
                             thumbShape: RoundSliderThumbShape(enabledThumbRadius: 16.0),
                             trackHeight: 6.0,
                             tickMarkShape: RoundSliderTickMarkShape(tickMarkRadius: 2.0),
-                            activeTickMarkColor: Color(0xFF4287F5),
-                            inactiveTickMarkColor: Color(0xFFEFF6FF),
+                            activeTickMarkColor: FlutterFlowTheme.of(context).primary,
+                            inactiveTickMarkColor: Color(0xFFE6F3E6),
                           ),
                           child: Slider(
                             value: _model.raggioSelezionato,
@@ -299,7 +299,7 @@ class _SelezioneRaggioWidgetState extends State<SelezioneRaggioWidget> {
                             font: GoogleFonts.dmSans(
                               fontWeight: FontWeight.w600,
                             ),
-                            color: Color(0xFF4287F5),
+                            color: FlutterFlowTheme.of(context).primary,
                             letterSpacing: 0.0,
                           ),
                         ),
@@ -323,12 +323,12 @@ class _SelezioneRaggioWidgetState extends State<SelezioneRaggioWidget> {
                       height: 48.0,
                       padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0xFF4287F5),
+                      color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         font: GoogleFonts.dmSans(
                           fontWeight: FontWeight.w600,
                         ),
-                        color: Color(0xFFEFF6FF),
+                        color: Color(0xFFE6F3E6),
                         letterSpacing: 0.0,
                       ),
                       borderSide: BorderSide(

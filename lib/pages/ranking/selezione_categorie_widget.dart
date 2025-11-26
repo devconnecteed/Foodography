@@ -143,7 +143,7 @@ class _SelezioneCategorieWidgetState extends State<SelezioneCategorieWidget> {
                                   return Container(
                                     decoration: BoxDecoration(
                                       gradient: LinearGradient(
-                                        colors: [Color(0xFF4287F5), Color(0xFF1D4ED8)],
+                                        colors: [FlutterFlowTheme.of(context).primary, FlutterFlowTheme.of(context).primary],
                                         begin: Alignment.topLeft,
                                         end: Alignment.bottomRight,
                                       ),
@@ -208,7 +208,7 @@ class _SelezioneCategorieWidgetState extends State<SelezioneCategorieWidget> {
                                   width: 24.0,
                                   height: 24.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFF4287F5),
+                                    color: FlutterFlowTheme.of(context).primary,
                                     shape: BoxShape.circle,
                                   ),
                                   child: Icon(
@@ -256,7 +256,7 @@ class _SelezioneCategorieWidgetState extends State<SelezioneCategorieWidget> {
                             font: GoogleFonts.dmSans(
                               fontWeight: FontWeight.w600,
                             ),
-                            color: Color(0xFF4287F5),
+                            color: FlutterFlowTheme.of(context).primary,
                             letterSpacing: 0.0,
                           ),
                         ),
@@ -282,12 +282,12 @@ class _SelezioneCategorieWidgetState extends State<SelezioneCategorieWidget> {
                       height: 48.0,
                       padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0xFF4287F5),
+                      color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         font: GoogleFonts.dmSans(
                           fontWeight: FontWeight.w600,
                         ),
-                        color: Color(0xFFEFF6FF),
+                        color: Color(0xFFE6F3E6),
                         letterSpacing: 0.0,
                       ),
                       borderSide: BorderSide(

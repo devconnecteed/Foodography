@@ -156,7 +156,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
                           // Add button
                           Container(
                             decoration: BoxDecoration(
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: FlutterFlowIconButton(
@@ -227,7 +227,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                 child: TabBar(
                   controller: _tabController,
-                  labelColor: Color(0xFF4287F5),
+                  labelColor: FlutterFlowTheme.of(context).primary,
                   unselectedLabelColor: Color(0xFFBDBDBD),
                   labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
                     font: GoogleFonts.dmSans(
@@ -239,7 +239,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
                     font: GoogleFonts.dmSans(),
                     letterSpacing: 0.0,
                   ),
-                  indicatorColor: Color(0xFF4287F5),
+                  indicatorColor: FlutterFlowTheme.of(context).primary,
                   indicatorWeight: 2.0,
                   isScrollable: true,
                   tabAlignment: TabAlignment.start,
@@ -292,7 +292,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
       width: 56.0,
       height: 70.0,
       decoration: BoxDecoration(
-        color: isSelected ? Color(0xFFDBEAFE) : Color(0xFFFFFFFF),
+        color: isSelected ? FlutterFlowTheme.of(context).secondary : Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(20.0),
         border: isSelected ? null : Border.all(
           color: Color(0xFFEFEFEF),
@@ -311,7 +311,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
                 font: GoogleFonts.dmSans(
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
                 ),
-                color: isSelected ? Color(0xFF2665EA) : Color(0xFF7C7C7C),
+                color: isSelected ? FlutterFlowTheme.of(context).primary : Color(0xFF7C7C7C),
                 letterSpacing: 0.0,
               ),
             ),
@@ -322,7 +322,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
                 font: GoogleFonts.dmSans(
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
                 ),
-                color: isSelected ? Color(0xFF2665EA) : Color(0xFF172554),
+                color: isSelected ? FlutterFlowTheme.of(context).primary : FlutterFlowTheme.of(context).secondary,
                 letterSpacing: 0.0,
               ),
             ),
@@ -332,7 +332,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
                 width: 6.0,
                 height: 6.0,
                 decoration: BoxDecoration(
-                  color: Color(0xFF2665EA),
+                  color: FlutterFlowTheme.of(context).primary,
                   borderRadius: BorderRadius.circular(3.0),
                 ),
               ),
@@ -448,7 +448,7 @@ class _DiarioWidgetState extends State<DiarioWidget> with TickerProviderStateMix
                           padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
                           child: Icon(
                             Icons.star,
-                            color: starIndex < cardData['rating']! ? Color(0xFF172F56) : Color(0xFFE5E5E5),
+                            color: starIndex < cardData['rating']! ? FlutterFlowTheme.of(context).secondary : Color(0xFFE5E5E5),
                             size: 16.0,
                           ),
                         );

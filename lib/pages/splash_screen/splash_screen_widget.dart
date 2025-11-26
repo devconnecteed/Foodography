@@ -77,19 +77,10 @@ class _SplashScreenWidgetState extends State<SplashScreenWidget>
     
     // Avvia l'animazione di dissolvenza
     _fadeController.forward().then((_) {
-      // Naviga dopo che l'animazione è completata SENZA transizioni aggiuntive
+      // Naviga dopo che l'animazione è completata
       if (mounted) {
-        Navigator.of(context).pushReplacement(
-          PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const Onboarding01Widget(),
-            transitionDuration: Duration.zero, // Nessuna transizione aggiuntiva
-            reverseTransitionDuration: Duration.zero,
-            transitionsBuilder: (context, animation, secondaryAnimation, child) {
-              // Transizione istantanea - nessuna animazione
-              return child;
-            },
-          ),
-        );
+        // Usa la navigazione dichiarativa (GoRouter/FlutterFlow) per evitare conflitti con Navigator.pages
+        context.goNamed(Onboarding01Widget.routeName);
       }
     });
   }

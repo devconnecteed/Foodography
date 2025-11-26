@@ -122,7 +122,7 @@ class _ProfiloWidgetState extends State<ProfiloWidget> {
                               children: [
                                 Icon(
                                   Icons.edit,
-                                  color: Color(0xFF4287F5),
+                                  color: FlutterFlowTheme.of(context).primary,
                                   size: 16.0,
                                 ),
                                 SizedBox(width: 4.0),
@@ -130,7 +130,7 @@ class _ProfiloWidgetState extends State<ProfiloWidget> {
                                   'Modifica profilo',
                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.dmSans(),
-                                    color: Color(0xFF4287F5),
+                                    color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
                                   ),
                                 ),

@@ -93,7 +93,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                         width: 80.0,
                         height: 80.0,
                         decoration: BoxDecoration(
-                          color: Color(0xFF4287F5),
+                          color: FlutterFlowTheme.of(context).primary,
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         child: Icon(
@@ -111,7 +111,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                         style: GoogleFonts.dmSans(
                           fontSize: 28.0,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFF4287F5),
+                          color: FlutterFlowTheme.of(context).primary,
                         ),
                       ),
                       
@@ -159,7 +159,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
@@ -216,7 +216,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
@@ -273,7 +273,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
@@ -331,7 +331,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
@@ -362,7 +362,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                               _model.passwordVisibility
                                   ? Icons.visibility_outlined
                                   : Icons.visibility_off_outlined,
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               size: 24.0,
                             ),
                           ),
@@ -417,7 +417,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               width: 2.0,
                             ),
                             borderRadius: BorderRadius.circular(12.0),
@@ -448,7 +448,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                               _model.confermaPasswordVisibility
                                   ? Icons.visibility_outlined
                                   : Icons.visibility_off_outlined,
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               size: 24.0,
                             ),
                           ),
@@ -473,7 +473,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                           height: 52.0,
                           padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                           iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xFF4287F5),
+                          color: FlutterFlowTheme.of(context).primary,
                           textStyle: GoogleFonts.dmSans(
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,
@@ -505,7 +505,7 @@ class _RegistrazioneWidgetState extends State<RegistrazioneWidget> {
                               'Effettua il login',
                               style: GoogleFonts.dmSans(
                                 fontSize: 16.0,
-                                color: Color(0xFF4287F5),
+                                color: FlutterFlowTheme.of(context).primary,
                                 decoration: TextDecoration.underline,
                               ),
                             ),

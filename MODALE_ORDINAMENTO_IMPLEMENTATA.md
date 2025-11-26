@@ -22,8 +22,8 @@ Ho creato una modale per la selezione dell'ordinamento che si apre quando si cli
 - ✅ **Radio Button**: Indicatori visivi per selezione
 
 ### **3. Controlli Utente**
-- ✅ **Pulsante Annulla**: Trasparente senza bordo, testo #4287F5
-- ✅ **Pulsante Conferma**: Primario #4287F5 con testo #EFF6FF
+- ✅ **Pulsante Annulla**: Trasparente senza bordo, testo #2E7D32
+- ✅ **Pulsante Conferma**: Primario #2E7D32 con testo #EFF6FF
 - ✅ **Tap Opzione**: Selezione diretta toccando l'opzione
 - ✅ **Navigazione**: Ritorno alla pagina ranking
 
@@ -104,8 +104,8 @@ class RankingModel extends FlutterFlowModel<RankingWidget> {
 - **Spacing**: Opzioni molto vicine con padding ridotto
 
 ### **Bottoni in Fondo**
-- **Annulla**: Trasparente senza bordo, testo #4287F5
-- **Conferma**: Primario #4287F5 con testo #EFF6FF
+- **Annulla**: Trasparente senza bordo, testo #2E7D32
+- **Conferma**: Primario #2E7D32 con testo #EFF6FF
 - **Layout**: Allineati orizzontalmente con spacing
 
 ### **Stati Visivi**
@@ -122,7 +122,7 @@ margin: 8px tra le opzioni (ridotto)
 background: Trasparente (rimosso)
 border: Nessuno (rimosso)
 radio: 18x18px, bordo blu, interno bianco 6x6px
-texto: Colore blu #4287F5
+texto: Colore blu #2E7D32
 padding: 12px verticale, 0px orizzontale (ridotto)
 margin: 8px tra le opzioni (ridotto)
 ```

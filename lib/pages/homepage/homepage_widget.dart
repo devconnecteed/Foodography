@@ -213,7 +213,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0xFF4287F5),
+                                      color: FlutterFlowTheme.of(context).primary,
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(16.0),
@@ -237,7 +237,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                           20.0, 0.0, 0.0, 0.0),
                                   prefixIcon: Icon(
                                     Icons.search,
-                                    color: Color(0xFF172554),
+                                    color: FlutterFlowTheme.of(context).secondary,
                                   ),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -259,7 +259,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                cursorColor: Color(0xFF172554),
+                                cursorColor: FlutterFlowTheme.of(context).secondary,
                                 validator: _model.textControllerValidator
                                     .asValidator(context),
                                 onTap: () async {

@@ -81,7 +81,7 @@ Expanded(
 - **Aggiornamento**: Il calendario si aggiorna correttamente
 
 ### **✅ Visual Feedback**
-- **Giorno selezionato**: Sfondo blu (`#DBEAFE`) e testo blu (`#2665EA`)
+- **Giorno selezionato**: Sfondo blu (`#042A2B`) e testo blu (`#2665EA`)
 - **Giorni futuri**: Testo grigio e non cliccabili
 - **Giorni passati**: Testo normale e cliccabili
 

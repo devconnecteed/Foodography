@@ -187,7 +187,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 _currentPageName = tabs.keys.toList()[i];
               }),
               backgroundColor: Colors.transparent,
-              selectedItemColor: Color(0xFF4287F5),
+              selectedItemColor: FlutterFlowTheme.of(context).primary,
               unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
               selectedBackgroundColor: Color(0x00000000),
               borderRadius: 0.0,
@@ -204,8 +204,8 @@ class _NavBarPageState extends State<NavBarPage> {
                 Icon(
                   Icons.search,
                   color: currentIndex == 0
-                      ? Color(0xFF4287F5)
-                      : Color(0xFF172F56),
+                      ? FlutterFlowTheme.of(context).primary
+                      : FlutterFlowTheme.of(context).secondary,
                   size: 24.0,
                 ),
                 SizedBox(height: 2.0),
@@ -216,8 +216,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 0
-                        ? Color(0xFF4287F5)
-                        : Color(0xFF172F56),
+                        ? FlutterFlowTheme.of(context).primary
+                        : FlutterFlowTheme.of(context).secondary,
                     fontSize: 14.0,
                   ),
                 ),
@@ -231,8 +231,8 @@ class _NavBarPageState extends State<NavBarPage> {
                 Icon(
                   currentIndex == 1 ? Icons.favorite : Icons.favorite_border,
                   color: currentIndex == 1
-                      ? Color(0xFF4287F5)
-                      : Color(0xFF172F56),
+                      ? FlutterFlowTheme.of(context).primary
+                      : FlutterFlowTheme.of(context).secondary,
                   size: 24.0,
                 ),
                 SizedBox(height: 2.0),
@@ -243,8 +243,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 1
-                        ? Color(0xFF4287F5)
-                        : Color(0xFF172F56),
+                        ? FlutterFlowTheme.of(context).primary
+                        : FlutterFlowTheme.of(context).secondary,
                     fontSize: 14.0,
                   ),
                 ),
@@ -258,8 +258,8 @@ class _NavBarPageState extends State<NavBarPage> {
                 Icon(
                   currentIndex == 2 ? Icons.camera_alt : Icons.camera_alt_outlined,
                   color: currentIndex == 2
-                      ? Color(0xFF4287F5)
-                      : Color(0xFF172F56),
+                      ? FlutterFlowTheme.of(context).primary
+                      : FlutterFlowTheme.of(context).secondary,
                   size: 24.0,
                 ),
                 SizedBox(height: 2.0),
@@ -270,8 +270,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 2
-                        ? Color(0xFF4287F5)
-                        : Color(0xFF172F56),
+                        ? FlutterFlowTheme.of(context).primary
+                        : FlutterFlowTheme.of(context).secondary,
                     fontSize: 14.0,
                   ),
                 ),
@@ -285,8 +285,8 @@ class _NavBarPageState extends State<NavBarPage> {
                 Icon(
                   currentIndex == 3 ? Icons.person_rounded : Icons.person_outline_rounded,
                   color: currentIndex == 3
-                      ? Color(0xFF4287F5)
-                      : Color(0xFF172F56),
+                      ? FlutterFlowTheme.of(context).primary
+                      : FlutterFlowTheme.of(context).secondary,
                   size: 24.0,
                 ),
                 SizedBox(height: 2.0),
@@ -297,8 +297,8 @@ class _NavBarPageState extends State<NavBarPage> {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 3
-                        ? Color(0xFF4287F5)
-                        : Color(0xFF172F56),
+                        ? FlutterFlowTheme.of(context).primary
+                        : FlutterFlowTheme.of(context).secondary,
                     fontSize: 14.0,
                   ),
                 ),

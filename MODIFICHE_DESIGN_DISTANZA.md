@@ -8,7 +8,7 @@ Ho applicato le modifiche richieste per migliorare il design della modale di sel
 
 ### **1. Bottone "Annulla"**
 - ✅ **Background**: Rimosso (già trasparente)
-- ✅ **Testo**: Solo testo blu (#4287F5)
+- ✅ **Testo**: Solo testo blu (#2E7D32)
 - ✅ **Bordo**: Trasparente
 - ✅ **Risultato**: Design pulito e minimale
 

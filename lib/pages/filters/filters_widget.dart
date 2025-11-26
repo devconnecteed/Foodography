@@ -836,7 +836,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                           iconAlignment: IconAlignment.end,
                           iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x004287F5),
+                          color: Color(0x0094B384),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     font: GoogleFonts.dmSans(
@@ -1309,7 +1309,7 @@ class _FiltersWidgetState extends State<FiltersWidget> {
                               16.0, 0.0, 16.0, 0.0),
                           iconPadding:
                               EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                          color: Color(0x004287F5),
+                          color: Color(0x0094B384),
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     font: GoogleFonts.dmSans(

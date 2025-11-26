@@ -209,7 +209,7 @@ class _FlutterFlowVideoPlayerState extends State<FlutterFlowVideoPlayer>
                           width: 48.0,
                           height: 48.0,
                           child: SpinKitDoubleBounce(
-                            color: Color(0xFF4287F5),
+                            color: FlutterFlowTheme.of(context).primary,
                             size: 48.0,
                           ),
                         ),

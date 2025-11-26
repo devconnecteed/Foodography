@@ -159,7 +159,7 @@ class _PosizioneAttualeWidgetState extends State<PosizioneAttualeWidget> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12.0),
                         border: Border.all(
-                          color: Color(0xFF4287F5),
+                          color: FlutterFlowTheme.of(context).primary,
                           width: 1.0,
                         ),
                       ),
@@ -172,7 +172,7 @@ class _PosizioneAttualeWidgetState extends State<PosizioneAttualeWidget> {
                           children: [
                             Icon(
                               Icons.send,
-                              color: Color(0xFF4287F5),
+                              color: FlutterFlowTheme.of(context).primary,
                               size: 20.0,
                             ),
                             SizedBox(width: 8.0),
@@ -182,7 +182,7 @@ class _PosizioneAttualeWidgetState extends State<PosizioneAttualeWidget> {
                                 font: GoogleFonts.dmSans(
                                   fontWeight: FontWeight.w500,
                                 ),
-                                color: Color(0xFF4287F5),
+                                color: FlutterFlowTheme.of(context).primary,
                                 letterSpacing: 0.0,
                               ),
                             ),

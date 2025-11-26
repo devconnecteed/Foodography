@@ -190,7 +190,7 @@ class _SearchWidgetState extends State<SearchWidget> {
                                               20.0, 0.0, 0.0, 0.0),
                                       prefixIcon: Icon(
                                         Icons.search,
-                                        color: Color(0xFF172554),
+                                        color: FlutterFlowTheme.of(context).secondary,
                                       ),
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -216,7 +216,7 @@ class _SearchWidgetState extends State<SearchWidget> {
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                    cursorColor: Color(0xFF172554),
+                                    cursorColor: FlutterFlowTheme.of(context).secondary,
                                     validator: _model.textControllerValidator
                                         .asValidator(context),
                                   ),

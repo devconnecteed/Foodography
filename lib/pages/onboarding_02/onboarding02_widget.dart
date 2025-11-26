@@ -463,7 +463,7 @@ class _Onboarding02WidgetState extends State<Onboarding02Widget> {
                                                                               FlutterFlowTheme.of(context).titleSmall.fontStyle,
                                                                         ),
                                                                         color: Color(
-                                                                            0xFF4287F5),
+                                                                            0xFF2E7D32),
                                                                         letterSpacing:
                                                                             0.0,
                                                                         fontWeight:

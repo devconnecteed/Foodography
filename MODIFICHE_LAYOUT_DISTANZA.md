@@ -8,7 +8,7 @@ Ho riorganizzato il layout della modale di selezione distanza secondo le specifi
 
 ### **1. Bottone "Annulla"**
 - ✅ **Background**: Confermato trasparente (già corretto)
-- ✅ **Testo**: Solo testo blu (#4287F5)
+- ✅ **Testo**: Solo testo blu (#2E7D32)
 - ✅ **Design**: Pulito e minimale
 
 ### **2. Riorganizzazione Layout**
